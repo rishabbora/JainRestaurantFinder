@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Tithi - Jain Food Finder</title>
+    <style>
+        .center-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div id="content">
+        <img src="{{ url_for('static', filename='Tithi.jpg') }}" alt="Tithi" style="width: 90%; height: 100%;" class="center-image">
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jain Restaurant Finder</title>
+    <style>
+        #navbar {
+            background-color: #2d2800;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: #f5f2ec;
+        }
+
+       
+
+        #navbar-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #navbar-title img {
+            height: 30px;
+            width: auto;
+        }
+
+        .side-nav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1001;
+            top: 0;
+            left: 0;
+            background-color: #2d2800;
+            overflow-x: hidden;
+            transition: width 0.5s;
+            padding-top: 60px;
+        }
+
+        .side-nav a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #f5f2ec;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .side-nav a:hover {
+            background-color: #f5f2ec;
+            color: #2d2800;
+        }
+
+        .side-nav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <span class="menu-icon" onclick="toggleNav()">&#9776;</span>
+        <a href="/" id="navbar-title">
+            <img src="static/anika.png" alt="Jain Restaurant Finder">
+        </a>
+    </div>
+    <div id="sideNav" class="side-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+        <a href="/">Find a Restaurant</a>
+        <a href="/add_restaurant">Add a Restaurant</a>
+        <a href="/jain_diet">The Jain Diet</a>
+        <a href="/tithi">Tithi Calendar</a>
+        <a href="/feedback">Feedback Form</a>
+    </div>
+
+    <script>
+        function toggleNav() {
+            var sideNav = document.getElementById("sideNav");
+            if (sideNav.style.width === "250px") {
+                sideNav.style.width = "0";
+            } else {
+                sideNav.style.width = "250px";
+            }
+        }
+
+        function centerNavbarImage() {
+            const navbarTitle = document.getElementById('navbar-title');
+            const pageWidth = window.innerWidth;
+            const navbarTitleWidth = navbarTitle.offsetWidth;
+            const imageWidth = navbarTitle.querySelector('img').offsetWidth;
+            const leftPosition = (pageWidth / 2) - (navbarTitleWidth / 2) + (imageWidth / 2);
+            navbarTitle.style.left = `${leftPosition}px`;
+        }
+
+        window.addEventListener('resize', centerNavbarImage);
+        window.addEventListener('load', centerNavbarImage);
+    </script>
+</body>
+</html>

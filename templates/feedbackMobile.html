@@ -1,0 +1,22 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Feedback - Jain Food Finder</title>
+</head>
+<body>
+    {% include 'navbarMobile.html' %}
+    <div id="content">
+        <h1>Feedback Form</h1>
+        <iframe class="fade-in" src="https://docs.google.com/forms/d/e/1FAIpQLSfuiE5BF41TyGGHusuFO4pC2ljjV_AmS10lEMPIRx0zkKPmBw/viewform?embedded=true" 
+        width="97%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>        
+        
+        
+    </div>
+</body>
+</html>

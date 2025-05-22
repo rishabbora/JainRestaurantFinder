@@ -1,0 +1,57 @@
+<div id="navbar">
+    <a href="/" id="home-button">
+        <img src="static/anika.png" alt="Home" id="lotus-logo">
+    </a>
+    <a href="/">Find a Restaurant</a>
+    <a href="/add_restaurant">Add a Restaurant</a>
+    <a href="/jain_diet">The Jain Diet</a>
+    <a href="/tithi">Tithi Calendar</a>
+    <a href="/feedback">Feedback Form</a>
+</div>
+
+<style>
+    #navbar {
+        background-color: #2d2800;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    #navbar a:not(#home-button) {
+        display: block;
+        color: #f5f2ec;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    #navbar a {
+        display: block;
+        color: #e6d4bc;
+        text-align: center;
+        padding: 0 16px;
+        text-decoration: none;
+    }
+
+    #navbar a:not(#home-button):hover {
+        background-color: #f5f2ec;
+        color: #2d2800;
+    }
+
+    #home-button {
+        margin-right: auto; /* Push the home button to the left */
+        display: flex;
+        align-items: center; /* Align the image vertically */
+        padding: 0; /* Remove padding from the home button */
+    }
+
+    #lotus-logo {
+        height: 50px; /* Adjust the height as needed */
+        width: auto; /* Maintain aspect ratio */
+    }
+</style>

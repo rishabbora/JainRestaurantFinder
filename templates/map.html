@@ -1,0 +1,2588 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_74f175265ee32e941c8767cf02d0f9d1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_74f175265ee32e941c8767cf02d0f9d1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_74f175265ee32e941c8767cf02d0f9d1 = L.map(
+                "map_74f175265ee32e941c8767cf02d0f9d1",
+                {
+                    center: [32.8755662, -117.2323252],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8389e84c83cbf657fc84e5c36161a951 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_8389e84c83cbf657fc84e5c36161a951.addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var circle_23235fe1b1bf96ef930fa29d1879e0cd = L.circle(
+                [32.8755662, -117.2323252],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8046.72, "stroke": true, "weight": 3}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var marker_9f2b3069f6221803cdcaa84a53f03085 = L.marker(
+                [33.0456115, -117.2936279],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_8fac11a5ba72542e3f605fd868a11630 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to bottom, #A51931 20%, #F4F5F8 20%, #F4F5F8 40%, #2D2A4A 40%, #2D2A4A 60%, #F4F5F8 60%, #F4F5F8 80%, #A51931 80%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_9f2b3069f6221803cdcaa84a53f03085.setIcon(div_icon_8fac11a5ba72542e3f605fd868a11630);
+        
+    
+        var popup_bf87191ba346c2294beac8928f88a2e6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_392398594b04cbe5ed945798f7c833f7 = $(`<div id="html_392398594b04cbe5ed945798f7c833f7" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Plumeria</b>: Thai Restaurant.<br>Pure Veg/Vegan: Yes<br>Notes and Entrees: Thai food<br><a href="https://www.google.com/search?q=Plumeria Encinitas California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_bf87191ba346c2294beac8928f88a2e6.setContent(html_392398594b04cbe5ed945798f7c833f7);
+            
+        
+
+        marker_9f2b3069f6221803cdcaa84a53f03085.bindPopup(popup_bf87191ba346c2294beac8928f88a2e6)
+        ;
+
+        
+    
+    
+            marker_9f2b3069f6221803cdcaa84a53f03085.bindTooltip(
+                `<div>
+                     Plumeria: Thai Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9fa1bcd6646527470147d7794632b284 = L.marker(
+                [33.178088, -117.34],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_ce15f997f6cd6ea15e6c15e20643e64e = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to bottom, #A51931 20%, #F4F5F8 20%, #F4F5F8 40%, #2D2A4A 40%, #2D2A4A 60%, #F4F5F8 60%, #F4F5F8 80%, #A51931 80%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_9fa1bcd6646527470147d7794632b284.setIcon(div_icon_ce15f997f6cd6ea15e6c15e20643e64e);
+        
+    
+        var popup_83ced252e68bd2384e825d1bf11b6ff5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_508e1648dbadf0d422d84153a56a7584 = $(`<div id="html_508e1648dbadf0d422d84153a56a7584" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Bkk Thai Kitchen</b>: Thai Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: thai<br><a href="https://www.google.com/search?q=BKK Thai Kitchen Carlsbad California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_83ced252e68bd2384e825d1bf11b6ff5.setContent(html_508e1648dbadf0d422d84153a56a7584);
+            
+        
+
+        marker_9fa1bcd6646527470147d7794632b284.bindPopup(popup_83ced252e68bd2384e825d1bf11b6ff5)
+        ;
+
+        
+    
+    
+            marker_9fa1bcd6646527470147d7794632b284.bindTooltip(
+                `<div>
+                     Bkk Thai Kitchen: Thai Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c2c37b42018b47d6e9c6da3b7e6dd38f = L.marker(
+                [33.0524239, -117.2598763],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_97e3aa17ce7d5844e64081bca26b00fb = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_c2c37b42018b47d6e9c6da3b7e6dd38f.setIcon(div_icon_97e3aa17ce7d5844e64081bca26b00fb);
+        
+    
+        var popup_262ae41f46cd0097d5960662bf508049 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d07cc293c67bd43e59bac6176cb57f76 = $(`<div id="html_d07cc293c67bd43e59bac6176cb57f76" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Tandoori Palace</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Tandoori Palace Encinitas California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_262ae41f46cd0097d5960662bf508049.setContent(html_d07cc293c67bd43e59bac6176cb57f76);
+            
+        
+
+        marker_c2c37b42018b47d6e9c6da3b7e6dd38f.bindPopup(popup_262ae41f46cd0097d5960662bf508049)
+        ;
+
+        
+    
+    
+            marker_c2c37b42018b47d6e9c6da3b7e6dd38f.bindTooltip(
+                `<div>
+                     Tandoori Palace: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f6e5b8281722ef9555c7f7605a0c40de = L.marker(
+                [33.8612275, -118.082288],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_313f39b4ad0b8361a4c40560e3996ff5 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_f6e5b8281722ef9555c7f7605a0c40de.setIcon(div_icon_313f39b4ad0b8361a4c40560e3996ff5);
+        
+    
+        var popup_84937288f1960c677b735e56842f631a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_42a097bf1926b04de695476dca604c7f = $(`<div id="html_42a097bf1926b04de695476dca604c7f" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Jai Bharat</b>: Indian Restaurant.<br>Pure Veg/Vegan: Yes<br>Notes and Entrees: Most things are customizable<br><a href="https://www.google.com/search?q=Jai Bharat Artesia California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_84937288f1960c677b735e56842f631a.setContent(html_42a097bf1926b04de695476dca604c7f);
+            
+        
+
+        marker_f6e5b8281722ef9555c7f7605a0c40de.bindPopup(popup_84937288f1960c677b735e56842f631a)
+        ;
+
+        
+    
+    
+            marker_f6e5b8281722ef9555c7f7605a0c40de.bindTooltip(
+                `<div>
+                     Jai Bharat: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_40eb9ee329f5d68a0ec042dbaa02f198 = L.marker(
+                [40.752527, -73.827342],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_daf3cc8e18802b038c7f4de83b5afda6 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_40eb9ee329f5d68a0ec042dbaa02f198.setIcon(div_icon_daf3cc8e18802b038c7f4de83b5afda6);
+        
+    
+        var popup_f4d68528c40eca589850e1d1ab912570 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_64ab57e4f2170afea170aed42db266dd = $(`<div id="html_64ab57e4f2170afea170aed42db266dd" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Buddha Bodai</b>: Asian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Mock Meat<br><a href="https://www.google.com/search?q=Buddha Bodai New York City New York USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_f4d68528c40eca589850e1d1ab912570.setContent(html_64ab57e4f2170afea170aed42db266dd);
+            
+        
+
+        marker_40eb9ee329f5d68a0ec042dbaa02f198.bindPopup(popup_f4d68528c40eca589850e1d1ab912570)
+        ;
+
+        
+    
+    
+            marker_40eb9ee329f5d68a0ec042dbaa02f198.bindTooltip(
+                `<div>
+                     Buddha Bodai: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_34eeefa9be81015d472bd93af87da3e8 = L.marker(
+                [40.7127753, -74.0059728],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_c2a896f41ff8659be33e1fce90684d6f = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_34eeefa9be81015d472bd93af87da3e8.setIcon(div_icon_c2a896f41ff8659be33e1fce90684d6f);
+        
+    
+        var popup_86de8c303411b168d570b7e279d5f250 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0639e128b293f15869e60dbfaa0b1f3d = $(`<div id="html_0639e128b293f15869e60dbfaa0b1f3d" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Han Dynasty</b>: Asian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Dry pot, tofu dishes, noodle dishes<br><a href="https://www.google.com/search?q=Han Dynasty New York New York USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_86de8c303411b168d570b7e279d5f250.setContent(html_0639e128b293f15869e60dbfaa0b1f3d);
+            
+        
+
+        marker_34eeefa9be81015d472bd93af87da3e8.bindPopup(popup_86de8c303411b168d570b7e279d5f250)
+        ;
+
+        
+    
+    
+            marker_34eeefa9be81015d472bd93af87da3e8.bindTooltip(
+                `<div>
+                     Han Dynasty: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0a216b317e164ecf56d5c97575f6d973 = L.marker(
+                [40.7332782, -73.9915595],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_566f36a6fb1a4dd4f4979e02f421932d = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_0a216b317e164ecf56d5c97575f6d973.setIcon(div_icon_566f36a6fb1a4dd4f4979e02f421932d);
+        
+    
+        var popup_945f694eaa1fe867c36638cc4f17d6a3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8a9f968517a8075b43c053f090dc372e = $(`<div id="html_8a9f968517a8075b43c053f090dc372e" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Ribalta</b>: Italian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Pizza sauce can be made Jain<br><a href="https://www.google.com/search?q=Ribalta New York New York USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_945f694eaa1fe867c36638cc4f17d6a3.setContent(html_8a9f968517a8075b43c053f090dc372e);
+            
+        
+
+        marker_0a216b317e164ecf56d5c97575f6d973.bindPopup(popup_945f694eaa1fe867c36638cc4f17d6a3)
+        ;
+
+        
+    
+    
+            marker_0a216b317e164ecf56d5c97575f6d973.bindTooltip(
+                `<div>
+                     Ribalta: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f97dd2681e3f08f399e1c5233f9a94c1 = L.marker(
+                [40.747576, -73.9812702],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_708106d9c35ef41286a3a1843733c1cf = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_f97dd2681e3f08f399e1c5233f9a94c1.setIcon(div_icon_708106d9c35ef41286a3a1843733c1cf);
+        
+    
+        var popup_74a0031f27dd70f109f96bbabe8c8078 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ff18f25844d32dad7d5400702c977ba8 = $(`<div id="html_ff18f25844d32dad7d5400702c977ba8" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Franchia</b>: Asian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Has many asian dishes mostly customizable Jain<br><a href="https://www.google.com/search?q=Franchia New York New York USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_74a0031f27dd70f109f96bbabe8c8078.setContent(html_ff18f25844d32dad7d5400702c977ba8);
+            
+        
+
+        marker_f97dd2681e3f08f399e1c5233f9a94c1.bindPopup(popup_74a0031f27dd70f109f96bbabe8c8078)
+        ;
+
+        
+    
+    
+            marker_f97dd2681e3f08f399e1c5233f9a94c1.bindTooltip(
+                `<div>
+                     Franchia: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e69ccd8ada9bc35d5cc6cf872fbd4ae5 = L.marker(
+                [40.7237493, -73.99681989999999],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_5a93a9d6f92e807769018562e15b405e = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_e69ccd8ada9bc35d5cc6cf872fbd4ae5.setIcon(div_icon_5a93a9d6f92e807769018562e15b405e);
+        
+    
+        var popup_db237b8f3ceee3c8a4aec9c8e353cee8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6191ca7f726429320ec4be140bbb6c07 = $(`<div id="html_6191ca7f726429320ec4be140bbb6c07" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Hampton Chutney</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Some dosas can be customized to be Jain<br><a href="https://www.google.com/search?q=Hampton Chutney New York New York USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_db237b8f3ceee3c8a4aec9c8e353cee8.setContent(html_6191ca7f726429320ec4be140bbb6c07);
+            
+        
+
+        marker_e69ccd8ada9bc35d5cc6cf872fbd4ae5.bindPopup(popup_db237b8f3ceee3c8a4aec9c8e353cee8)
+        ;
+
+        
+    
+    
+            marker_e69ccd8ada9bc35d5cc6cf872fbd4ae5.bindTooltip(
+                `<div>
+                     Hampton Chutney: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a32103d0aa1459d4c04223f32c7dcce5 = L.marker(
+                [40.76360100000001, -73.976415],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_19ef531cbaf610626bab486cb400da4b = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/sushi.jpeg\" alt=\"Sushi\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_a32103d0aa1459d4c04223f32c7dcce5.setIcon(div_icon_19ef531cbaf610626bab486cb400da4b);
+        
+    
+        var popup_8c4b915a5d75fdcb95e03613969fe3f5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3343b2af19fcb07410bcf0c27ad7518c = $(`<div id="html_3343b2af19fcb07410bcf0c27ad7518c" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Nobu</b>: Sushi and Asian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Crispy rice avocado, Avocado carpaccio, Edamame choclo, Blistered shishito peppers, Brussels sprouts in ponzu sauce, tofu new style, artichoke salad, vegan mochi dessert<br><a href="https://www.google.com/search?q=Nobu New York New York USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_8c4b915a5d75fdcb95e03613969fe3f5.setContent(html_3343b2af19fcb07410bcf0c27ad7518c);
+            
+        
+
+        marker_a32103d0aa1459d4c04223f32c7dcce5.bindPopup(popup_8c4b915a5d75fdcb95e03613969fe3f5)
+        ;
+
+        
+    
+    
+            marker_a32103d0aa1459d4c04223f32c7dcce5.bindTooltip(
+                `<div>
+                     Nobu: Sushi Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eac3c0303f10844b1c99b285541b9b0f = L.marker(
+                [40.82815069999999, -74.1026756],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_5e10059048787d0fa6da822c65d0d92e = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/american.png\" alt=\"american\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_eac3c0303f10844b1c99b285541b9b0f.setIcon(div_icon_5e10059048787d0fa6da822c65d0d92e);
+        
+    
+        var popup_4bc90d3d3a311e83d8301d5e13cd3c29 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f7a21d663c1fb6507a0ddb19e0fe9219 = $(`<div id="html_f7a21d663c1fb6507a0ddb19e0fe9219" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Rutherford Pancake House</b>: American and Dessert Place.<br>Pure Veg/Vegan: No<br>Notes and Entrees: vegan pancakes/waffles, quesedillas<br><a href="https://www.google.com/search?q=Rutherford Pancake House Rutherford New Jersey USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_4bc90d3d3a311e83d8301d5e13cd3c29.setContent(html_f7a21d663c1fb6507a0ddb19e0fe9219);
+            
+        
+
+        marker_eac3c0303f10844b1c99b285541b9b0f.bindPopup(popup_4bc90d3d3a311e83d8301d5e13cd3c29)
+        ;
+
+        
+    
+    
+            marker_eac3c0303f10844b1c99b285541b9b0f.bindTooltip(
+                `<div>
+                     Rutherford Pancake House: American Place
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_10ac2bd31a042138e2a746eb6dfb4156 = L.marker(
+                [40.7905826, -74.0008074],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_4a9a8056649edc895b0225f29b25f17f = L.divIcon({"className": "empty", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_10ac2bd31a042138e2a746eb6dfb4156.setIcon(div_icon_4a9a8056649edc895b0225f29b25f17f);
+        
+    
+        var popup_86d738cdd9784fb9a96d047e73744c0f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7b84375671654dbad4d33c51dc634417 = $(`<div id="html_7b84375671654dbad4d33c51dc634417" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Burp Kitchen</b>:  Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: flatbread, and corny bean burger is jain. Can make burrito jain as well, connect with the owner flexible and understands Jain<br><a href="https://www.google.com/search?q=Burp Kitchen Guttenburg New Jersey USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_86d738cdd9784fb9a96d047e73744c0f.setContent(html_7b84375671654dbad4d33c51dc634417);
+            
+        
+
+        marker_10ac2bd31a042138e2a746eb6dfb4156.bindPopup(popup_86d738cdd9784fb9a96d047e73744c0f)
+        ;
+
+        
+    
+    
+            marker_10ac2bd31a042138e2a746eb6dfb4156.bindTooltip(
+                `<div>
+                     Burp Kitchen:  Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_57c28b74ca3962f8f6d3105272192918 = L.marker(
+                [40.5745212, -74.3241499],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_622b67e9fdd3585ff71b81d97c622db7 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_57c28b74ca3962f8f6d3105272192918.setIcon(div_icon_622b67e9fdd3585ff71b81d97c622db7);
+        
+    
+        var popup_26be3ffdb337cd43f3c231dcdc3779d6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c8ebc08c10416f6c021ac9f0e25ba258 = $(`<div id="html_c8ebc08c10416f6c021ac9f0e25ba258" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Khasiyat</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Khasiyat Edison New Jersey USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_26be3ffdb337cd43f3c231dcdc3779d6.setContent(html_c8ebc08c10416f6c021ac9f0e25ba258);
+            
+        
+
+        marker_57c28b74ca3962f8f6d3105272192918.bindPopup(popup_26be3ffdb337cd43f3c231dcdc3779d6)
+        ;
+
+        
+    
+    
+            marker_57c28b74ca3962f8f6d3105272192918.bindTooltip(
+                `<div>
+                     Khasiyat: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0dbf056a923a3ba73148851e1b1b99d0 = L.marker(
+                [40.5514807, -74.44343760000001],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_ca49d7a0bea2524ff7b5b514f65009e8 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_0dbf056a923a3ba73148851e1b1b99d0.setIcon(div_icon_ca49d7a0bea2524ff7b5b514f65009e8);
+        
+    
+        var popup_4246f843bf2fb0c4f8f44a4b775de82e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4bc529ab21f430896031a7f97f6a324c = $(`<div id="html_4bc529ab21f430896031a7f97f6a324c" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Chand Palace</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Call ahead<br><a href="https://www.google.com/search?q=Chand Palace Piscataway New Jersey USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_4246f843bf2fb0c4f8f44a4b775de82e.setContent(html_4bc529ab21f430896031a7f97f6a324c);
+            
+        
+
+        marker_0dbf056a923a3ba73148851e1b1b99d0.bindPopup(popup_4246f843bf2fb0c4f8f44a4b775de82e)
+        ;
+
+        
+    
+    
+            marker_0dbf056a923a3ba73148851e1b1b99d0.bindTooltip(
+                `<div>
+                     Chand Palace: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0e5b77c0151bc3934ae7f9aa3e8b56db = L.marker(
+                [40.336878, -74.5960711],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_9161cb07e0587cdbe13963fb985fda95 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_0e5b77c0151bc3934ae7f9aa3e8b56db.setIcon(div_icon_9161cb07e0587cdbe13963fb985fda95);
+        
+    
+        var popup_d4b88dfe102f76a0eeca65603599bfa0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a9349f153430acbe12a9a9a4a104030a = $(`<div id="html_a9349f153430acbe12a9a9a4a104030a" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Romeo'S Restaurant & Pizza</b>: Italian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Romeo's Restaurant & Pizza Plainsboro New Jersey USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_d4b88dfe102f76a0eeca65603599bfa0.setContent(html_a9349f153430acbe12a9a9a4a104030a);
+            
+        
+
+        marker_0e5b77c0151bc3934ae7f9aa3e8b56db.bindPopup(popup_d4b88dfe102f76a0eeca65603599bfa0)
+        ;
+
+        
+    
+    
+            marker_0e5b77c0151bc3934ae7f9aa3e8b56db.bindTooltip(
+                `<div>
+                     Romeo'S Restaurant & Pizza: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e3f4fccddc25bcfcfaec3db8fdd7b5e6 = L.marker(
+                [39.9622875, -75.1724119],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_db187931a801225b93229571ca9b937a = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_e3f4fccddc25bcfcfaec3db8fdd7b5e6.setIcon(div_icon_db187931a801225b93229571ca9b937a);
+        
+    
+        var popup_3cb23bf6232ec11572f3f62459d1f713 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a188344443ba78c2c84d57b5b9dfb0f0 = $(`<div id="html_a188344443ba78c2c84d57b5b9dfb0f0" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Unit Su Vege</b>: Asian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Unit Su Vege Philadelphia Pennsylvania USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_3cb23bf6232ec11572f3f62459d1f713.setContent(html_a188344443ba78c2c84d57b5b9dfb0f0);
+            
+        
+
+        marker_e3f4fccddc25bcfcfaec3db8fdd7b5e6.bindPopup(popup_3cb23bf6232ec11572f3f62459d1f713)
+        ;
+
+        
+    
+    
+            marker_e3f4fccddc25bcfcfaec3db8fdd7b5e6.bindTooltip(
+                `<div>
+                     Unit Su Vege: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_41893069dcd8b1046abd79ab45b1a89c = L.marker(
+                [39.950247, -75.167598],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_1e888c13ed65d825ad2987d20467a7a8 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_41893069dcd8b1046abd79ab45b1a89c.setIcon(div_icon_1e888c13ed65d825ad2987d20467a7a8);
+        
+    
+        var popup_9d5b4da81968f7aad22fcea18d5ae8b0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bfc19114c87033095a5a2a01dd92976d = $(`<div id="html_bfc19114c87033095a5a2a01dd92976d" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Dan Dan Noodles</b>: Asian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: lot of tofu items can be made jain<br><a href="https://www.google.com/search?q=Dan Dan Noodles Philadelphia Pennsylvania USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_9d5b4da81968f7aad22fcea18d5ae8b0.setContent(html_bfc19114c87033095a5a2a01dd92976d);
+            
+        
+
+        marker_41893069dcd8b1046abd79ab45b1a89c.bindPopup(popup_9d5b4da81968f7aad22fcea18d5ae8b0)
+        ;
+
+        
+    
+    
+            marker_41893069dcd8b1046abd79ab45b1a89c.bindTooltip(
+                `<div>
+                     Dan Dan Noodles: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_29a2c0779f66d14373a37f15dd68091c = L.marker(
+                [39.951795, -75.1781949],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_359cae8ef8878e9c6eeb48040759d026 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to bottom, #A51931 20%, #F4F5F8 20%, #F4F5F8 40%, #2D2A4A 40%, #2D2A4A 60%, #F4F5F8 60%, #F4F5F8 80%, #A51931 80%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_29a2c0779f66d14373a37f15dd68091c.setIcon(div_icon_359cae8ef8878e9c6eeb48040759d026);
+        
+    
+        var popup_cda3ba25d67b700f4e4933ace3538e52 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_db32bd4f35b7d9b4812646b8d62d0c97 = $(`<div id="html_db32bd4f35b7d9b4812646b8d62d0c97" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Erawan Thai</b>: Thai Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Pad Thai, Spicy Fried Rice, Spicy Noodle<br><a href="https://www.google.com/search?q=Erawan Thai Philadelphia Pennsylvania USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_cda3ba25d67b700f4e4933ace3538e52.setContent(html_db32bd4f35b7d9b4812646b8d62d0c97);
+            
+        
+
+        marker_29a2c0779f66d14373a37f15dd68091c.bindPopup(popup_cda3ba25d67b700f4e4933ace3538e52)
+        ;
+
+        
+    
+    
+            marker_29a2c0779f66d14373a37f15dd68091c.bindTooltip(
+                `<div>
+                     Erawan Thai: Thai Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ccb0b425d0e3ae0cc8c857b9678973b = L.marker(
+                [25.7284458, -80.2423737],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_f6b5f19d123ac17bb9b379a1f85af3de = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/american.png\" alt=\"american\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_5ccb0b425d0e3ae0cc8c857b9678973b.setIcon(div_icon_f6b5f19d123ac17bb9b379a1f85af3de);
+        
+    
+        var popup_14923bf0c587e1746ea60ada12053af4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_10060d51681688197cfd5fed6025e532 = $(`<div id="html_10060d51681688197cfd5fed6025e532" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Planta</b>: American Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Planta Miami Florida USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_14923bf0c587e1746ea60ada12053af4.setContent(html_10060d51681688197cfd5fed6025e532);
+            
+        
+
+        marker_5ccb0b425d0e3ae0cc8c857b9678973b.bindPopup(popup_14923bf0c587e1746ea60ada12053af4)
+        ;
+
+        
+    
+    
+            marker_5ccb0b425d0e3ae0cc8c857b9678973b.bindTooltip(
+                `<div>
+                     Planta: American Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7cde235432882faff23b39512d528ab6 = L.marker(
+                [34.0269339, -118.2765517],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_1159f9604414db86f9fc2727ddb74ca6 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to bottom, #A51931 20%, #F4F5F8 20%, #F4F5F8 40%, #2D2A4A 40%, #2D2A4A 60%, #F4F5F8 60%, #F4F5F8 80%, #A51931 80%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_7cde235432882faff23b39512d528ab6.setIcon(div_icon_1159f9604414db86f9fc2727ddb74ca6);
+        
+    
+        var popup_42d77f6dc9d20476e7c07259ae4abdfc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3c9ba968677abcc08e21dcc1337ad508 = $(`<div id="html_3c9ba968677abcc08e21dcc1337ad508" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Thai By Trio</b>: Thai Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Pad Thai, Spicy Noodle, most other things.<br><a href="https://www.google.com/search?q=Thai by Trio Los Angeles California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_42d77f6dc9d20476e7c07259ae4abdfc.setContent(html_3c9ba968677abcc08e21dcc1337ad508);
+            
+        
+
+        marker_7cde235432882faff23b39512d528ab6.bindPopup(popup_42d77f6dc9d20476e7c07259ae4abdfc)
+        ;
+
+        
+    
+    
+            marker_7cde235432882faff23b39512d528ab6.bindTooltip(
+                `<div>
+                     Thai By Trio: Thai Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4ad416fda4cd474d24c535241e3da65b = L.marker(
+                [34.1051544, -118.2914387],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_7f7edaf0042f283dd4ba92cda7c383c1 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_4ad416fda4cd474d24c535241e3da65b.setIcon(div_icon_7f7edaf0042f283dd4ba92cda7c383c1);
+        
+    
+        var popup_2f4ccfd5c065efd8ec5cf948a82215d2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_be391a1fdca0e4c60c8aa0bcc887273e = $(`<div id="html_be391a1fdca0e4c60c8aa0bcc887273e" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Anarbagh</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Anarbagh Los Angeles California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_2f4ccfd5c065efd8ec5cf948a82215d2.setContent(html_be391a1fdca0e4c60c8aa0bcc887273e);
+            
+        
+
+        marker_4ad416fda4cd474d24c535241e3da65b.bindPopup(popup_2f4ccfd5c065efd8ec5cf948a82215d2)
+        ;
+
+        
+    
+    
+            marker_4ad416fda4cd474d24c535241e3da65b.bindTooltip(
+                `<div>
+                     Anarbagh: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_869a6be41bfa95c5dad5d4c782be8e78 = L.marker(
+                [34.0200244, -118.4041351],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_9ab293a9d339e4d51fb5a0aa59c48231 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_869a6be41bfa95c5dad5d4c782be8e78.setIcon(div_icon_9ab293a9d339e4d51fb5a0aa59c48231);
+        
+    
+        var popup_7e11e89828bfbb603967eafbe2a28f35 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8b9f9367d01309905f7f2a9c1e2355aa = $(`<div id="html_8b9f9367d01309905f7f2a9c1e2355aa" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Mayura Indian Restaurant</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Mayura Indian Restaurant Los Angeles California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_7e11e89828bfbb603967eafbe2a28f35.setContent(html_8b9f9367d01309905f7f2a9c1e2355aa);
+            
+        
+
+        marker_869a6be41bfa95c5dad5d4c782be8e78.bindPopup(popup_7e11e89828bfbb603967eafbe2a28f35)
+        ;
+
+        
+    
+    
+            marker_869a6be41bfa95c5dad5d4c782be8e78.bindTooltip(
+                `<div>
+                     Mayura Indian Restaurant: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_811ed8eb64bafcecc625d11091493715 = L.marker(
+                [34.0610763, -118.244049],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_e5277e8583f6e1d03374ca7b4f31a209 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_811ed8eb64bafcecc625d11091493715.setIcon(div_icon_e5277e8583f6e1d03374ca7b4f31a209);
+        
+    
+        var popup_919b69c0307f9c1e1d63173a643b61f2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_144a7909f8bc856c02790f14b8bf63f3 = $(`<div id="html_144a7909f8bc856c02790f14b8bf63f3" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Kapoor’S Akbar Indian Restaurant</b>: Italian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Kapoor’s Akbar Indian Restaurant Los Angeles California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_919b69c0307f9c1e1d63173a643b61f2.setContent(html_144a7909f8bc856c02790f14b8bf63f3);
+            
+        
+
+        marker_811ed8eb64bafcecc625d11091493715.bindPopup(popup_919b69c0307f9c1e1d63173a643b61f2)
+        ;
+
+        
+    
+    
+            marker_811ed8eb64bafcecc625d11091493715.bindTooltip(
+                `<div>
+                     Kapoor’S Akbar Indian Restaurant: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_419891999b97155a3c6a00305dbc0036 = L.marker(
+                [34.0397099, -118.2987956],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_3d957ff30b3345d015b93c8082203176 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/sushi.jpeg\" alt=\"Sushi\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_419891999b97155a3c6a00305dbc0036.setIcon(div_icon_3d957ff30b3345d015b93c8082203176);
+        
+    
+        var popup_312f3fe1d5ec7f0d2ec39361566977f3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4865a732430c83339a21b5fd9bbd884f = $(`<div id="html_4865a732430c83339a21b5fd9bbd884f" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Sushi With Attitude</b>: Sushi Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Sushi with Attitude Los Angeles California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_312f3fe1d5ec7f0d2ec39361566977f3.setContent(html_4865a732430c83339a21b5fd9bbd884f);
+            
+        
+
+        marker_419891999b97155a3c6a00305dbc0036.bindPopup(popup_312f3fe1d5ec7f0d2ec39361566977f3)
+        ;
+
+        
+    
+    
+            marker_419891999b97155a3c6a00305dbc0036.bindTooltip(
+                `<div>
+                     Sushi With Attitude: Sushi Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bdceb97682e69afaab12bc0540c32bf4 = L.marker(
+                [41.8675917, -87.6263378],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_62bad28ed7031cca145cbe3e3e7387e1 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_bdceb97682e69afaab12bc0540c32bf4.setIcon(div_icon_62bad28ed7031cca145cbe3e3e7387e1);
+        
+    
+        var popup_f4cb9407c664d756fbd1485f23a2ddbc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_13dd2f6920252bc1fcd1edf4a7c53916 = $(`<div id="html_13dd2f6920252bc1fcd1edf4a7c53916" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Bombay Chopsticks</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Bombay Chopsticks Chicago Illinois USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_f4cb9407c664d756fbd1485f23a2ddbc.setContent(html_13dd2f6920252bc1fcd1edf4a7c53916);
+            
+        
+
+        marker_bdceb97682e69afaab12bc0540c32bf4.bindPopup(popup_f4cb9407c664d756fbd1485f23a2ddbc)
+        ;
+
+        
+    
+    
+            marker_bdceb97682e69afaab12bc0540c32bf4.bindTooltip(
+                `<div>
+                     Bombay Chopsticks: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_574ab303eb859e849b4a50a6d7dc8684 = L.marker(
+                [41.971894, -87.6790202],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_9591d8d7b915983bde4b556d45036318 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_574ab303eb859e849b4a50a6d7dc8684.setIcon(div_icon_9591d8d7b915983bde4b556d45036318);
+        
+    
+        var popup_3aa79860ba985d5c4c960ddef950d074 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_682fcf49aede83459c831232f257df5d = $(`<div id="html_682fcf49aede83459c831232f257df5d" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Chicago Hot Breads</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Chicago Hot Breads Chicago Illinois USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_3aa79860ba985d5c4c960ddef950d074.setContent(html_682fcf49aede83459c831232f257df5d);
+            
+        
+
+        marker_574ab303eb859e849b4a50a6d7dc8684.bindPopup(popup_3aa79860ba985d5c4c960ddef950d074)
+        ;
+
+        
+    
+    
+            marker_574ab303eb859e849b4a50a6d7dc8684.bindTooltip(
+                `<div>
+                     Chicago Hot Breads: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_555db44e8a417323bfea42478529736a = L.marker(
+                [41.8766354, -87.6339991],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_b51fe3505e79bece82a034c79cfa991b = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_555db44e8a417323bfea42478529736a.setIcon(div_icon_b51fe3505e79bece82a034c79cfa991b);
+        
+    
+        var popup_47d5a0d77e4ccc0b2558f4dd04411ff8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ed2d9383e9aa53e11a09ddebab8db2c3 = $(`<div id="html_ed2d9383e9aa53e11a09ddebab8db2c3" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Shimla Peppers</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Shimla Peppers Chicago Illinois USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_47d5a0d77e4ccc0b2558f4dd04411ff8.setContent(html_ed2d9383e9aa53e11a09ddebab8db2c3);
+            
+        
+
+        marker_555db44e8a417323bfea42478529736a.bindPopup(popup_47d5a0d77e4ccc0b2558f4dd04411ff8)
+        ;
+
+        
+    
+    
+            marker_555db44e8a417323bfea42478529736a.bindTooltip(
+                `<div>
+                     Shimla Peppers: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a60f7ddf0dd7c15ecd28f93d3935df87 = L.marker(
+                [41.8781136, -87.6297982],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_339812ad334ea5b0442070bbdcc6cb0a = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_a60f7ddf0dd7c15ecd28f93d3935df87.setIcon(div_icon_339812ad334ea5b0442070bbdcc6cb0a);
+        
+    
+        var popup_51a49d3039dd4c06c1b951f393c443b4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_45d1e3185ede8d0ebd983a9bd95ba74c = $(`<div id="html_45d1e3185ede8d0ebd983a9bd95ba74c" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Neehee</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=NeeHee Chicago Illinois USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_51a49d3039dd4c06c1b951f393c443b4.setContent(html_45d1e3185ede8d0ebd983a9bd95ba74c);
+            
+        
+
+        marker_a60f7ddf0dd7c15ecd28f93d3935df87.bindPopup(popup_51a49d3039dd4c06c1b951f393c443b4)
+        ;
+
+        
+    
+    
+            marker_a60f7ddf0dd7c15ecd28f93d3935df87.bindTooltip(
+                `<div>
+                     Neehee: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4e2a582210721bc05ed1f6863ec7dda0 = L.marker(
+                [37.4765642, -121.9205941],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_66f6c98c60accf216667f0f926708345 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to bottom, #A51931 20%, #F4F5F8 20%, #F4F5F8 40%, #2D2A4A 40%, #2D2A4A 60%, #F4F5F8 60%, #F4F5F8 80%, #A51931 80%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_4e2a582210721bc05ed1f6863ec7dda0.setIcon(div_icon_66f6c98c60accf216667f0f926708345);
+        
+    
+        var popup_845388b9b05191502c9e1ce1c4a108c4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7b8e32def7d24dc4862fb0e52a269515 = $(`<div id="html_7b8e32def7d24dc4862fb0e52a269515" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Sala Thai</b>: Thai Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Sala Thai Fremont California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_845388b9b05191502c9e1ce1c4a108c4.setContent(html_7b8e32def7d24dc4862fb0e52a269515);
+            
+        
+
+        marker_4e2a582210721bc05ed1f6863ec7dda0.bindPopup(popup_845388b9b05191502c9e1ce1c4a108c4)
+        ;
+
+        
+    
+    
+            marker_4e2a582210721bc05ed1f6863ec7dda0.bindTooltip(
+                `<div>
+                     Sala Thai: Thai Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d79c7039a93bccab7c8965efc23b80da = L.marker(
+                [37.7749295, -122.4194155],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_758cea7d2cf673abd3233cd6ff6da015 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_d79c7039a93bccab7c8965efc23b80da.setIcon(div_icon_758cea7d2cf673abd3233cd6ff6da015);
+        
+    
+        var popup_e2fdd5e22f85a1ca3d3103a9590af032 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fa4cfcd113c7407e9d2f8df0a70d9df3 = $(`<div id="html_fa4cfcd113c7407e9d2f8df0a70d9df3" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Ananda Bhavan</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Ananda Bhavan San Francisco California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_e2fdd5e22f85a1ca3d3103a9590af032.setContent(html_fa4cfcd113c7407e9d2f8df0a70d9df3);
+            
+        
+
+        marker_d79c7039a93bccab7c8965efc23b80da.bindPopup(popup_e2fdd5e22f85a1ca3d3103a9590af032)
+        ;
+
+        
+    
+    
+            marker_d79c7039a93bccab7c8965efc23b80da.bindTooltip(
+                `<div>
+                     Ananda Bhavan: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_708787584a95c09368da077c52771a05 = L.marker(
+                [37.4076298, -122.0107996],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_703ea3490bfa01b3625cba9ae66613c9 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/sushi.jpeg\" alt=\"Sushi\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_708787584a95c09368da077c52771a05.setIcon(div_icon_703ea3490bfa01b3625cba9ae66613c9);
+        
+    
+        var popup_a1e4665b9bf259a25803bc39311405e8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_20e5d737b9cb27b10ee10cb8a503feaf = $(`<div id="html_20e5d737b9cb27b10ee10cb8a503feaf" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Oh Baby Sushi</b>: Sushi Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Sauces are already Jain, many dishes are customizable<br><a href="https://www.google.com/search?q=Oh Baby Sushi Mountain View California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_a1e4665b9bf259a25803bc39311405e8.setContent(html_20e5d737b9cb27b10ee10cb8a503feaf);
+            
+        
+
+        marker_708787584a95c09368da077c52771a05.bindPopup(popup_a1e4665b9bf259a25803bc39311405e8)
+        ;
+
+        
+    
+    
+            marker_708787584a95c09368da077c52771a05.bindTooltip(
+                `<div>
+                     Oh Baby Sushi: Sushi Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4ed5201192081ab808cbeda7d733dde4 = L.marker(
+                [37.4120571, -121.9182273],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_d8084e074ddf7fa80830e36e9e36b987 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_4ed5201192081ab808cbeda7d733dde4.setIcon(div_icon_d8084e074ddf7fa80830e36e9e36b987);
+        
+    
+        var popup_b03489011e2e9ca07bf39424d6aeb037 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f3da9dd7faab5d1aa4f82340048f592d = $(`<div id="html_f3da9dd7faab5d1aa4f82340048f592d" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Asian Bowl</b>: Asian Restaurant.<br>Pure Veg/Vegan: Yes<br>Notes and Entrees: Jain sizzler<br><a href="https://www.google.com/search?q=Asian Bowl Milpitas California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_b03489011e2e9ca07bf39424d6aeb037.setContent(html_f3da9dd7faab5d1aa4f82340048f592d);
+            
+        
+
+        marker_4ed5201192081ab808cbeda7d733dde4.bindPopup(popup_b03489011e2e9ca07bf39424d6aeb037)
+        ;
+
+        
+    
+    
+            marker_4ed5201192081ab808cbeda7d733dde4.bindTooltip(
+                `<div>
+                     Asian Bowl: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_828904dd0218a6d871355ff9196c016d = L.marker(
+                [40.0583238, -74.4056612],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_640a95d256338364dc077124f93e690f = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/mexican.png\" alt=\"mexican\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_828904dd0218a6d871355ff9196c016d.setIcon(div_icon_640a95d256338364dc077124f93e690f);
+        
+    
+        var popup_a257dc6f8e2034d8faa235a73f7bd90e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_839c6539f2c49314a22e8861c5fe41dd = $(`<div id="html_839c6539f2c49314a22e8861c5fe41dd" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Burp Kitchen</b>: Mexican Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: (flatbread, and corny bean burger is jain. Can make burrito jain as
+ well, connect with the owner flexible and understands Jain<br><a href="https://www.google.com/search?q=Burp Kitchen New Jersey New Jersey United States" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_a257dc6f8e2034d8faa235a73f7bd90e.setContent(html_839c6539f2c49314a22e8861c5fe41dd);
+            
+        
+
+        marker_828904dd0218a6d871355ff9196c016d.bindPopup(popup_a257dc6f8e2034d8faa235a73f7bd90e)
+        ;
+
+        
+    
+    
+            marker_828904dd0218a6d871355ff9196c016d.bindTooltip(
+                `<div>
+                     Burp Kitchen: Mexican Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a4faab273f01b6439ad91803399ed822 = L.marker(
+                [40.327503, -74.576171],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_a227844c605122acec180c7bf384a654 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_a4faab273f01b6439ad91803399ed822.setIcon(div_icon_a227844c605122acec180c7bf384a654);
+        
+    
+        var popup_08410e6e1966c814f69b8be853742011 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dbc94150158204d490c7ad9ef542ad46 = $(`<div id="html_dbc94150158204d490c7ad9ef542ad46" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Rhong Tiam</b>: Asian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Rhong Tiam Princeton New Jersey USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_08410e6e1966c814f69b8be853742011.setContent(html_dbc94150158204d490c7ad9ef542ad46);
+            
+        
+
+        marker_a4faab273f01b6439ad91803399ed822.bindPopup(popup_08410e6e1966c814f69b8be853742011)
+        ;
+
+        
+    
+    
+            marker_a4faab273f01b6439ad91803399ed822.bindTooltip(
+                `<div>
+                     Rhong Tiam: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2dd9527d122a70d5d5b87297e0aaf0d1 = L.marker(
+                [-33.8670187, 151.208205],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_12794a324912704530621c056199236d = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to bottom, #A51931 20%, #F4F5F8 20%, #F4F5F8 40%, #2D2A4A 40%, #2D2A4A 60%, #F4F5F8 60%, #F4F5F8 80%, #A51931 80%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_2dd9527d122a70d5d5b87297e0aaf0d1.setIcon(div_icon_12794a324912704530621c056199236d);
+        
+    
+        var popup_594acf708a3a8d96ca965832bde74682 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0edbcb688fb207f9f0db1a0a0929be7c = $(`<div id="html_0edbcb688fb207f9f0db1a0a0929be7c" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Long Chim Sydney</b>: Thai Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Long Chim Sydney Sydney Sydney Australia" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_594acf708a3a8d96ca965832bde74682.setContent(html_0edbcb688fb207f9f0db1a0a0929be7c);
+            
+        
+
+        marker_2dd9527d122a70d5d5b87297e0aaf0d1.bindPopup(popup_594acf708a3a8d96ca965832bde74682)
+        ;
+
+        
+    
+    
+            marker_2dd9527d122a70d5d5b87297e0aaf0d1.bindTooltip(
+                `<div>
+                     Long Chim Sydney: Thai Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_03780f03ff067570d59f15061384241a = L.marker(
+                [-12.1010803, -76.9712552],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_af777677f60cc6443af0a57bca91999e = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to bottom, #A51931 20%, #F4F5F8 20%, #F4F5F8 40%, #2D2A4A 40%, #2D2A4A 60%, #F4F5F8 60%, #F4F5F8 80%, #A51931 80%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_03780f03ff067570d59f15061384241a.setIcon(div_icon_af777677f60cc6443af0a57bca91999e);
+        
+    
+        var popup_96a603677ad8ac156fce42e6b525ff89 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d457150ad1a448816f7c1dac392d7d30 = $(`<div id="html_d457150ad1a448816f7c1dac392d7d30" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Lima Thai</b>: Thai Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Lima Thai Lima Lima Peru" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_96a603677ad8ac156fce42e6b525ff89.setContent(html_d457150ad1a448816f7c1dac392d7d30);
+            
+        
+
+        marker_03780f03ff067570d59f15061384241a.bindPopup(popup_96a603677ad8ac156fce42e6b525ff89)
+        ;
+
+        
+    
+    
+            marker_03780f03ff067570d59f15061384241a.bindTooltip(
+                `<div>
+                     Lima Thai: Thai Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e5a64296ce6edcff138dc1c04eb745d0 = L.marker(
+                [-12.0844352, -77.0319353],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_16db0d375631d67ec30466746653b006 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to bottom, #A51931 20%, #F4F5F8 20%, #F4F5F8 40%, #2D2A4A 40%, #2D2A4A 60%, #F4F5F8 60%, #F4F5F8 80%, #A51931 80%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_e5a64296ce6edcff138dc1c04eb745d0.setIcon(div_icon_16db0d375631d67ec30466746653b006);
+        
+    
+        var popup_8eb881802239f5dab6f590cb45ea63ac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_af53759168c5f3e6b29f5c257a1208d8 = $(`<div id="html_af53759168c5f3e6b29f5c257a1208d8" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Bangkok Restaurant</b>: Thai Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Bangkok Restaurant Lince Peru Peru" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_8eb881802239f5dab6f590cb45ea63ac.setContent(html_af53759168c5f3e6b29f5c257a1208d8);
+            
+        
+
+        marker_e5a64296ce6edcff138dc1c04eb745d0.bindPopup(popup_8eb881802239f5dab6f590cb45ea63ac)
+        ;
+
+        
+    
+    
+            marker_e5a64296ce6edcff138dc1c04eb745d0.bindTooltip(
+                `<div>
+                     Bangkok Restaurant: Thai Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_888713daa2ee4d33c5aba5bd57ca67f7 = L.marker(
+                [22.2817737, 114.1541034],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_c51bd4c85f5f0f1997dd300162109ab6 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_888713daa2ee4d33c5aba5bd57ca67f7.setIcon(div_icon_c51bd4c85f5f0f1997dd300162109ab6);
+        
+    
+        var popup_d5145653320b19d85878006b9a519623 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1fc5c78d51d33b7de75da994b7102da5 = $(`<div id="html_1fc5c78d51d33b7de75da994b7102da5" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>The Chinese Library</b>: Asian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=The Chinese Library Hong Kong Hong Kong Hong Kong" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_d5145653320b19d85878006b9a519623.setContent(html_1fc5c78d51d33b7de75da994b7102da5);
+            
+        
+
+        marker_888713daa2ee4d33c5aba5bd57ca67f7.bindPopup(popup_d5145653320b19d85878006b9a519623)
+        ;
+
+        
+    
+    
+            marker_888713daa2ee4d33c5aba5bd57ca67f7.bindTooltip(
+                `<div>
+                     The Chinese Library: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d6a47dab238f60e62bb97362119415ea = L.marker(
+                [22.2809562, 114.1554783],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_901cca88c385b5701e7a32e0309280e4 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_d6a47dab238f60e62bb97362119415ea.setIcon(div_icon_901cca88c385b5701e7a32e0309280e4);
+        
+    
+        var popup_9536a251195f52380961c1c26b747b06 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d202eb6f7010e598b9d2a640510d00ad = $(`<div id="html_d202eb6f7010e598b9d2a640510d00ad" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Kyoto Joe</b>: Asian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Kyoto Joe Hong Kong Hong Kong Hong Kong" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_9536a251195f52380961c1c26b747b06.setContent(html_d202eb6f7010e598b9d2a640510d00ad);
+            
+        
+
+        marker_d6a47dab238f60e62bb97362119415ea.bindPopup(popup_9536a251195f52380961c1c26b747b06)
+        ;
+
+        
+    
+    
+            marker_d6a47dab238f60e62bb97362119415ea.bindTooltip(
+                `<div>
+                     Kyoto Joe: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2b58055edcad59a33b28d0f8257291bc = L.marker(
+                [1.3004365, 103.8594837],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_ae5ce287bfaae97f6323f8b63a35963f = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_2b58055edcad59a33b28d0f8257291bc.setIcon(div_icon_ae5ce287bfaae97f6323f8b63a35963f);
+        
+    
+        var popup_b0ac9d63ce995da65acc100c31281745 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_afb99327f393185bfc9a113d3bcdd062 = $(`<div id="html_afb99327f393185bfc9a113d3bcdd062" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Pizza Fabbrica</b>: Italian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Pizza Fabbrica Singapore Singapore Singapore" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_b0ac9d63ce995da65acc100c31281745.setContent(html_afb99327f393185bfc9a113d3bcdd062);
+            
+        
+
+        marker_2b58055edcad59a33b28d0f8257291bc.bindPopup(popup_b0ac9d63ce995da65acc100c31281745)
+        ;
+
+        
+    
+    
+            marker_2b58055edcad59a33b28d0f8257291bc.bindTooltip(
+                `<div>
+                     Pizza Fabbrica: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8bbf9d8e15a0dde973cd85d9c84d3440 = L.marker(
+                [1.2857813, 103.8594487],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_683e0cf8781dd98f8604ed937d3d9ece = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_8bbf9d8e15a0dde973cd85d9c84d3440.setIcon(div_icon_683e0cf8781dd98f8604ed937d3d9ece);
+        
+    
+        var popup_47f63fc26b3039721d43751a5b27a01f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e65955499c4e7292a9e6985bf7bf83bb = $(`<div id="html_e65955499c4e7292a9e6985bf7bf83bb" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Roberta'S Pizza</b>: Italian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Roberta's Pizza Singapore Singapore Singapore" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_47f63fc26b3039721d43751a5b27a01f.setContent(html_e65955499c4e7292a9e6985bf7bf83bb);
+            
+        
+
+        marker_8bbf9d8e15a0dde973cd85d9c84d3440.bindPopup(popup_47f63fc26b3039721d43751a5b27a01f)
+        ;
+
+        
+    
+    
+            marker_8bbf9d8e15a0dde973cd85d9c84d3440.bindTooltip(
+                `<div>
+                     Roberta'S Pizza: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7cf8de8fae51ea13e5d15f7a2df91af6 = L.marker(
+                [1.2815386, 103.8447177],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_b870d82fc881296443b8588dea1e75bd = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_7cf8de8fae51ea13e5d15f7a2df91af6.setIcon(div_icon_b870d82fc881296443b8588dea1e75bd);
+        
+    
+        var popup_3b8bfa7ab20725affd9bd13749cac8f0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f345b81cf459eb29fa8b7b1f0a3c67c5 = $(`<div id="html_f345b81cf459eb29fa8b7b1f0a3c67c5" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Eight Treasures Vegetarian Restaurant</b>: Asian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Eight Treasures Vegetarian Restaurant Singapore Singapore Singapore" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_3b8bfa7ab20725affd9bd13749cac8f0.setContent(html_f345b81cf459eb29fa8b7b1f0a3c67c5);
+            
+        
+
+        marker_7cf8de8fae51ea13e5d15f7a2df91af6.bindPopup(popup_3b8bfa7ab20725affd9bd13749cac8f0)
+        ;
+
+        
+    
+    
+            marker_7cf8de8fae51ea13e5d15f7a2df91af6.bindTooltip(
+                `<div>
+                     Eight Treasures Vegetarian Restaurant: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bd2a11556f661e2171d519025e4814e4 = L.marker(
+                [-1.2598879, 36.7751901],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_67ea8555c7cf0c8fca61b2337f552ad6 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to bottom, #A51931 20%, #F4F5F8 20%, #F4F5F8 40%, #2D2A4A 40%, #2D2A4A 60%, #F4F5F8 60%, #F4F5F8 80%, #A51931 80%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_bd2a11556f661e2171d519025e4814e4.setIcon(div_icon_67ea8555c7cf0c8fca61b2337f552ad6);
+        
+    
+        var popup_5cc7d7508dc5a86f9271377055bd9178 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ed838a8fbc9571fc681c169e113ea2d3 = $(`<div id="html_ed838a8fbc9571fc681c169e113ea2d3" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Thai-Chi By Sarova</b>: Thai Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Thai-Chi by Sarova Nairobi Nairobi Kenya" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_5cc7d7508dc5a86f9271377055bd9178.setContent(html_ed838a8fbc9571fc681c169e113ea2d3);
+            
+        
+
+        marker_bd2a11556f661e2171d519025e4814e4.bindPopup(popup_5cc7d7508dc5a86f9271377055bd9178)
+        ;
+
+        
+    
+    
+            marker_bd2a11556f661e2171d519025e4814e4.bindTooltip(
+                `<div>
+                     Thai-Chi By Sarova: Thai Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b300842ab75d9d4abb76fbe7f6fbb1c5 = L.marker(
+                [-1.2517212, 36.7566765],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_0e6c31df82596568f1655d31c740223c = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_b300842ab75d9d4abb76fbe7f6fbb1c5.setIcon(div_icon_0e6c31df82596568f1655d31c740223c);
+        
+    
+        var popup_811c66b4f762782c62fe5276dad9c112 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2564e6b593d45800d29ef45b94027f60 = $(`<div id="html_2564e6b593d45800d29ef45b94027f60" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Gogol Pizza Loresho</b>: Italian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Gogol Pizza Loresho Nairobi Kenya Kenya" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_811c66b4f762782c62fe5276dad9c112.setContent(html_2564e6b593d45800d29ef45b94027f60);
+            
+        
+
+        marker_b300842ab75d9d4abb76fbe7f6fbb1c5.bindPopup(popup_811c66b4f762782c62fe5276dad9c112)
+        ;
+
+        
+    
+    
+            marker_b300842ab75d9d4abb76fbe7f6fbb1c5.bindTooltip(
+                `<div>
+                     Gogol Pizza Loresho: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bff6aa9b542264fe1bb78eabebef63d4 = L.marker(
+                [43.5373632, -79.72986639999999],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_5ff9eeff60a86cdcde10799d847528aa = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_bff6aa9b542264fe1bb78eabebef63d4.setIcon(div_icon_5ff9eeff60a86cdcde10799d847528aa);
+        
+    
+        var popup_fea084305e2389d2a4b1e65273ece319 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_335f3e5b2a18655e90fe90cb98211fcd = $(`<div id="html_335f3e5b2a18655e90fe90cb98211fcd" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Brar'S Erin Mills</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: call ahead<br><a href="https://www.google.com/search?q=Brar's Erin Mills Toronto Ontario Canada" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_fea084305e2389d2a4b1e65273ece319.setContent(html_335f3e5b2a18655e90fe90cb98211fcd);
+            
+        
+
+        marker_bff6aa9b542264fe1bb78eabebef63d4.bindPopup(popup_fea084305e2389d2a4b1e65273ece319)
+        ;
+
+        
+    
+    
+            marker_bff6aa9b542264fe1bb78eabebef63d4.bindTooltip(
+                `<div>
+                     Brar'S Erin Mills: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c337cf41d61f4ae5c14545fa1500aa52 = L.marker(
+                [43.653226, -79.3831843],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_17e291e4ebac650f4fd9ba2d7742b7ba = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/mediterranean.jpeg\" alt=\"mediterranean\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_c337cf41d61f4ae5c14545fa1500aa52.setIcon(div_icon_17e291e4ebac650f4fd9ba2d7742b7ba);
+        
+    
+        var popup_dc82f3fc85c0446ae37b9732f7a51d1e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_90d861d245de743614a4bc91d674d1dd = $(`<div id="html_90d861d245de743614a4bc91d674d1dd" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Paramount Middle Eastern Kitchen</b>: Mediterranean Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Ask for no onion garlic etc<br><a href="https://www.google.com/search?q=Paramount Middle Eastern Kitchen Toronto Ontario Canada" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_dc82f3fc85c0446ae37b9732f7a51d1e.setContent(html_90d861d245de743614a4bc91d674d1dd);
+            
+        
+
+        marker_c337cf41d61f4ae5c14545fa1500aa52.bindPopup(popup_dc82f3fc85c0446ae37b9732f7a51d1e)
+        ;
+
+        
+    
+    
+            marker_c337cf41d61f4ae5c14545fa1500aa52.bindTooltip(
+                `<div>
+                     Paramount Middle Eastern Kitchen: Mediterranean Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_403786768e3cfbeabbafb05d39a398dd = L.marker(
+                [25.1074551, 55.1983615],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_651f6b5a5862a852d40c5825b1783db8 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_403786768e3cfbeabbafb05d39a398dd.setIcon(div_icon_651f6b5a5862a852d40c5825b1783db8);
+        
+    
+        var popup_58d286b8c77777af87142e2bbc78fdd8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7c3d09eca4ff56180fe6d67287456fb8 = $(`<div id="html_7c3d09eca4ff56180fe6d67287456fb8" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Dip Dash Restaurant & Café</b>: Italian and Mediterranean Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Dip Dash Restaurant & Café Dubai UAE UAE" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_58d286b8c77777af87142e2bbc78fdd8.setContent(html_7c3d09eca4ff56180fe6d67287456fb8);
+            
+        
+
+        marker_403786768e3cfbeabbafb05d39a398dd.bindPopup(popup_58d286b8c77777af87142e2bbc78fdd8)
+        ;
+
+        
+    
+    
+            marker_403786768e3cfbeabbafb05d39a398dd.bindTooltip(
+                `<div>
+                     Dip Dash Restaurant & Café: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_91dedebcfeccf50da601a49f86279550 = L.marker(
+                [25.2487074, 55.3022648],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_61ce79bdbdc46f2b44e0841b3650fd85 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_91dedebcfeccf50da601a49f86279550.setIcon(div_icon_61ce79bdbdc46f2b44e0841b3650fd85);
+        
+    
+        var popup_10f9629ae93019af01587751bf061500 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fe0f3b8e5eb0d2b00c5802a43968c118 = $(`<div id="html_fe0f3b8e5eb0d2b00c5802a43968c118" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Bikanervala Karama</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Indian food and other food as well<br><a href="https://www.google.com/search?q=Bikanervala Karama Dubai UAE UAE" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_10f9629ae93019af01587751bf061500.setContent(html_fe0f3b8e5eb0d2b00c5802a43968c118);
+            
+        
+
+        marker_91dedebcfeccf50da601a49f86279550.bindPopup(popup_10f9629ae93019af01587751bf061500)
+        ;
+
+        
+    
+    
+            marker_91dedebcfeccf50da601a49f86279550.bindTooltip(
+                `<div>
+                     Bikanervala Karama: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2b173e2476cf9b9a84a006bc30ee45a0 = L.marker(
+                [51.2082734, 4.3931631],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_9869b1f9df97d1e28eb696a378383f49 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/mediterranean.jpeg\" alt=\"mediterranean\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_2b173e2476cf9b9a84a006bc30ee45a0.setIcon(div_icon_9869b1f9df97d1e28eb696a378383f49);
+        
+    
+        var popup_9d5e99859188831737ff76d433431bab = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6f295bf1bef8b7d64d7674ede5b1ce27 = $(`<div id="html_6f295bf1bef8b7d64d7674ede5b1ce27" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Finjan</b>: Mediterranean Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Finjan Antwerp Belgium Belgium" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_9d5e99859188831737ff76d433431bab.setContent(html_6f295bf1bef8b7d64d7674ede5b1ce27);
+            
+        
+
+        marker_2b173e2476cf9b9a84a006bc30ee45a0.bindPopup(popup_9d5e99859188831737ff76d433431bab)
+        ;
+
+        
+    
+    
+            marker_2b173e2476cf9b9a84a006bc30ee45a0.bindTooltip(
+                `<div>
+                     Finjan: Mediterranean Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9ed60b5164be6ad079b6b32a1385a60f = L.marker(
+                [51.2024803, 4.4234505],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_a22315bc4775dab7244c6aa7bb6ccf07 = L.divIcon({"className": "empty", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_9ed60b5164be6ad079b6b32a1385a60f.setIcon(div_icon_a22315bc4775dab7244c6aa7bb6ccf07);
+        
+    
+        var popup_58e20ca557a2ff5816bcdb6f259ae4e3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6dd7a2fad59deb060d52e30ca0a74c90 = $(`<div id="html_6dd7a2fad59deb060d52e30ca0a74c90" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>The Jane</b>:  Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=The Jane Antwerp Belgium Belgium" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_58e20ca557a2ff5816bcdb6f259ae4e3.setContent(html_6dd7a2fad59deb060d52e30ca0a74c90);
+            
+        
+
+        marker_9ed60b5164be6ad079b6b32a1385a60f.bindPopup(popup_58e20ca557a2ff5816bcdb6f259ae4e3)
+        ;
+
+        
+    
+    
+            marker_9ed60b5164be6ad079b6b32a1385a60f.bindTooltip(
+                `<div>
+                     The Jane:  Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_307aabe7a97f15731ce169a6a11f92bd = L.marker(
+                [18.9640443, 72.80788919999999],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_599d40c34fee62528a4c875765f22396 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_307aabe7a97f15731ce169a6a11f92bd.setIcon(div_icon_599d40c34fee62528a4c875765f22396);
+        
+    
+        var popup_2a5d480c1ed3cb2fe082af0badf1e495 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7bef6d4b9f89c07eb5d35f16b9e73cac = $(`<div id="html_7bef6d4b9f89c07eb5d35f16b9e73cac" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Gustoso</b>: Italian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Many pizzas, many pastas and many appetizers. Just tell them you are Jain. <br><a href="https://www.google.com/search?q=Gustoso Mumbai Maharashtra India" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_2a5d480c1ed3cb2fe082af0badf1e495.setContent(html_7bef6d4b9f89c07eb5d35f16b9e73cac);
+            
+        
+
+        marker_307aabe7a97f15731ce169a6a11f92bd.bindPopup(popup_2a5d480c1ed3cb2fe082af0badf1e495)
+        ;
+
+        
+    
+    
+            marker_307aabe7a97f15731ce169a6a11f92bd.bindTooltip(
+                `<div>
+                     Gustoso: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b22a51f7296f72e7cf6fd260dee6f3a = L.marker(
+                [20.6096713, 72.9311435],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_cbac846e6cccaec78f1f27b02ae133c1 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_3b22a51f7296f72e7cf6fd260dee6f3a.setIcon(div_icon_cbac846e6cccaec78f1f27b02ae133c1);
+        
+    
+        var popup_b7e938c7f6bdbf73765611381cc69cb7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fd188d2751b8996ad5c295c7627308bb = $(`<div id="html_fd188d2751b8996ad5c295c7627308bb" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Shree Udipi Restaurant</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Shree Udipi Restaurant Valsad Gujarat India" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_b7e938c7f6bdbf73765611381cc69cb7.setContent(html_fd188d2751b8996ad5c295c7627308bb);
+            
+        
+
+        marker_3b22a51f7296f72e7cf6fd260dee6f3a.bindPopup(popup_b7e938c7f6bdbf73765611381cc69cb7)
+        ;
+
+        
+    
+    
+            marker_3b22a51f7296f72e7cf6fd260dee6f3a.bindTooltip(
+                `<div>
+                     Shree Udipi Restaurant: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16288635bfe11c0bb81fb64c4b3e4f71 = L.marker(
+                [37.4026853, -121.940452],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_c6371ebf4350866f495cd02d3d34bd14 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_16288635bfe11c0bb81fb64c4b3e4f71.setIcon(div_icon_c6371ebf4350866f495cd02d3d34bd14);
+        
+    
+        var popup_0aa654f83196fcb3cb829a7a3cc416c1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fca8de884b0a74a5478a5e7fbcba6f5f = $(`<div id="html_fca8de884b0a74a5478a5e7fbcba6f5f" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>A2B</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=A2B San Jose California United States" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_0aa654f83196fcb3cb829a7a3cc416c1.setContent(html_fca8de884b0a74a5478a5e7fbcba6f5f);
+            
+        
+
+        marker_16288635bfe11c0bb81fb64c4b3e4f71.bindPopup(popup_0aa654f83196fcb3cb829a7a3cc416c1)
+        ;
+
+        
+    
+    
+            marker_16288635bfe11c0bb81fb64c4b3e4f71.bindTooltip(
+                `<div>
+                     A2B: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_05ac3b7ed6ec6cfc1484e9ed29f06fd7 = L.marker(
+                [20.5401399, 73.17921249999999],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_4b756319b80df7679196cbd4d11c44df = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_05ac3b7ed6ec6cfc1484e9ed29f06fd7.setIcon(div_icon_4b756319b80df7679196cbd4d11c44df);
+        
+    
+        var popup_76271c3d52d47f0b0d24a450f95dfa85 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d6ef5a96e8e739bda9311a09f89ef1b5 = $(`<div id="html_d6ef5a96e8e739bda9311a09f89ef1b5" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Ashoka</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Ashoka Dharampur Gujarat India" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_76271c3d52d47f0b0d24a450f95dfa85.setContent(html_d6ef5a96e8e739bda9311a09f89ef1b5);
+            
+        
+
+        marker_05ac3b7ed6ec6cfc1484e9ed29f06fd7.bindPopup(popup_76271c3d52d47f0b0d24a450f95dfa85)
+        ;
+
+        
+    
+    
+            marker_05ac3b7ed6ec6cfc1484e9ed29f06fd7.bindTooltip(
+                `<div>
+                     Ashoka: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_81ca819e57f3aebb71c4781674469dda = L.marker(
+                [20.5375733, 73.1691482],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_a928d28dcc56ffda6dd991299c83535a = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_81ca819e57f3aebb71c4781674469dda.setIcon(div_icon_a928d28dcc56ffda6dd991299c83535a);
+        
+    
+        var popup_0308096b5da88d570b3cb03de5fe22a1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7735e631327e45c15aa9921905bf8530 = $(`<div id="html_7735e631327e45c15aa9921905bf8530" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>New Fountain</b>: Indian and Asian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Have a lot of indian and indo-chinese. Many options. Paneer is incredible. <br><a href="https://www.google.com/search?q=New Fountain Dharampur Gujarat India" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_0308096b5da88d570b3cb03de5fe22a1.setContent(html_7735e631327e45c15aa9921905bf8530);
+            
+        
+
+        marker_81ca819e57f3aebb71c4781674469dda.bindPopup(popup_0308096b5da88d570b3cb03de5fe22a1)
+        ;
+
+        
+    
+    
+            marker_81ca819e57f3aebb71c4781674469dda.bindTooltip(
+                `<div>
+                     New Fountain: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8f7c70b601848b031c79646830bef6c7 = L.marker(
+                [20.540974, 73.17440049999999],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_c54c0674fbe5c2638d47b598f72e506b = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_8f7c70b601848b031c79646830bef6c7.setIcon(div_icon_c54c0674fbe5c2638d47b598f72e506b);
+        
+    
+        var popup_ad58508d74d098295a20429b906761c7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a0cfadeabfb7f1c284b676ac0418f72c = $(`<div id="html_a0cfadeabfb7f1c284b676ac0418f72c" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Sugar N Spice</b>: Indian and Asian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Most things here are jain<br><a href="https://www.google.com/search?q=Sugar n Spice Dharampur Gujarat India" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_ad58508d74d098295a20429b906761c7.setContent(html_a0cfadeabfb7f1c284b676ac0418f72c);
+            
+        
+
+        marker_8f7c70b601848b031c79646830bef6c7.bindPopup(popup_ad58508d74d098295a20429b906761c7)
+        ;
+
+        
+    
+    
+            marker_8f7c70b601848b031c79646830bef6c7.bindTooltip(
+                `<div>
+                     Sugar N Spice: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e54c14509fd3955949c308c79b2602fd = L.marker(
+                [55.943464, -3.183177],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_6cc08631bd3691ee0569a7be7bc79534 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_e54c14509fd3955949c308c79b2602fd.setIcon(div_icon_6cc08631bd3691ee0569a7be7bc79534);
+        
+    
+        var popup_8f16853779bac08decbd4a722c4ad6df = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4f2f5f9eba024e32ce0cc5485ae08be4 = $(`<div id="html_4f2f5f9eba024e32ce0cc5485ae08be4" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Kalpna</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: "can do a few things jain like chole and hara bhara kebab
+ "<br><a href="https://www.google.com/search?q=Kalpna Edinburgh England England" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_8f16853779bac08decbd4a722c4ad6df.setContent(html_4f2f5f9eba024e32ce0cc5485ae08be4);
+            
+        
+
+        marker_e54c14509fd3955949c308c79b2602fd.bindPopup(popup_8f16853779bac08decbd4a722c4ad6df)
+        ;
+
+        
+    
+    
+            marker_e54c14509fd3955949c308c79b2602fd.bindTooltip(
+                `<div>
+                     Kalpna: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d72e9db7a9a32091592ac04a34e69505 = L.marker(
+                [53.4807593, -2.2426305],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_e4d580ba716562453545c5b6141a979b = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_d72e9db7a9a32091592ac04a34e69505.setIcon(div_icon_e4d580ba716562453545c5b6141a979b);
+        
+    
+        var popup_e7378ed99cc9b3fbc64b1da0453b5472 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3d5a29df43f922fae3d005fcc10b67ac = $(`<div id="html_3d5a29df43f922fae3d005fcc10b67ac" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Lotus</b>: Asian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: Chinese/oriental - they are a Buddhist restaurant so don't use any onion garlic at all on their premises<br><a href="https://www.google.com/search?q=Lotus Manchester UK UK" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_e7378ed99cc9b3fbc64b1da0453b5472.setContent(html_3d5a29df43f922fae3d005fcc10b67ac);
+            
+        
+
+        marker_d72e9db7a9a32091592ac04a34e69505.bindPopup(popup_e7378ed99cc9b3fbc64b1da0453b5472)
+        ;
+
+        
+    
+    
+            marker_d72e9db7a9a32091592ac04a34e69505.bindTooltip(
+                `<div>
+                     Lotus: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4626e54e43265af764107e7d50084dad = L.marker(
+                [53.4545044, -2.2247237],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_05228c78b6b5cf1d4230ea5a2b3567b4 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/mediterranean.jpeg\" alt=\"mediterranean\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_4626e54e43265af764107e7d50084dad.setIcon(div_icon_05228c78b6b5cf1d4230ea5a2b3567b4);
+        
+    
+        var popup_216e6250ff7a227f69e2f094c2ec6287 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7fdff928af897990cf6c8bbf7c33f467 = $(`<div id="html_7fdff928af897990cf6c8bbf7c33f467" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Rusholme</b>: Mediterranean Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: do excellent falafel but you need to tell them specifically to make your falafel Jain. Ideally an hour before you visit<br><a href="https://www.google.com/search?q=Rusholme Manchester England England" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_216e6250ff7a227f69e2f094c2ec6287.setContent(html_7fdff928af897990cf6c8bbf7c33f467);
+            
+        
+
+        marker_4626e54e43265af764107e7d50084dad.bindPopup(popup_216e6250ff7a227f69e2f094c2ec6287)
+        ;
+
+        
+    
+    
+            marker_4626e54e43265af764107e7d50084dad.bindTooltip(
+                `<div>
+                     Rusholme: Mediterranean Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_85dff95070668b2302f1af2abe0558bb = L.marker(
+                [53.39313569999999, -2.2344681],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_3e18e91854433c441b420b1ce157028c = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_85dff95070668b2302f1af2abe0558bb.setIcon(div_icon_3e18e91854433c441b420b1ce157028c);
+        
+    
+        var popup_7388bd1f1a170768794a14266a4d2107 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3caed9eb8fc81ae085c19e4bca7763db = $(`<div id="html_3caed9eb8fc81ae085c19e4bca7763db" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Bhaji Pala</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: vegan indian fusion<br><a href="https://www.google.com/search?q=Bhaji pala Manchester England England" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_7388bd1f1a170768794a14266a4d2107.setContent(html_3caed9eb8fc81ae085c19e4bca7763db);
+            
+        
+
+        marker_85dff95070668b2302f1af2abe0558bb.bindPopup(popup_7388bd1f1a170768794a14266a4d2107)
+        ;
+
+        
+    
+    
+            marker_85dff95070668b2302f1af2abe0558bb.bindTooltip(
+                `<div>
+                     Bhaji Pala: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_707834033366c21655d6d00c302c1e0a = L.marker(
+                [25.2048493, 55.2707828],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_19c94a1c43cd2431771af00045e7fce8 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_707834033366c21655d6d00c302c1e0a.setIcon(div_icon_19c94a1c43cd2431771af00045e7fce8);
+        
+    
+        var popup_4f75697b617dd43fbebeebe4f9743cfe = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_52243546c1c87b8dc521f5c4d0a7c834 = $(`<div id="html_52243546c1c87b8dc521f5c4d0a7c834" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Dish Dash Pizza</b>: Italian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Dish Dash Pizza Dubai UAE UAE" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_4f75697b617dd43fbebeebe4f9743cfe.setContent(html_52243546c1c87b8dc521f5c4d0a7c834);
+            
+        
+
+        marker_707834033366c21655d6d00c302c1e0a.bindPopup(popup_4f75697b617dd43fbebeebe4f9743cfe)
+        ;
+
+        
+    
+    
+            marker_707834033366c21655d6d00c302c1e0a.bindTooltip(
+                `<div>
+                     Dish Dash Pizza: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_36683975f7253e29e4fbad068de68938 = L.marker(
+                [25.1306579, 55.1834024],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_8e61d001fde7b4134254e1b68b020580 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to bottom, #A51931 20%, #F4F5F8 20%, #F4F5F8 40%, #2D2A4A 40%, #2D2A4A 60%, #F4F5F8 60%, #F4F5F8 80%, #A51931 80%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_36683975f7253e29e4fbad068de68938.setIcon(div_icon_8e61d001fde7b4134254e1b68b020580);
+        
+    
+        var popup_15096619c0a73a4fc5424a4ab71f5fe8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_32f9a338697ee12c99961f956bd40696 = $(`<div id="html_32f9a338697ee12c99961f956bd40696" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Pai Thai</b>: Thai Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Pai Thai Dubai Dubai Dubai" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_15096619c0a73a4fc5424a4ab71f5fe8.setContent(html_32f9a338697ee12c99961f956bd40696);
+            
+        
+
+        marker_36683975f7253e29e4fbad068de68938.bindPopup(popup_15096619c0a73a4fc5424a4ab71f5fe8)
+        ;
+
+        
+    
+    
+            marker_36683975f7253e29e4fbad068de68938.bindTooltip(
+                `<div>
+                     Pai Thai: Thai Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_809c6ff6849555879a11931b3bebe24e = L.marker(
+                [43.6958589, 7.273727999999999],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_d782e5a7a93111b34d4edfe3c6c40151 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_809c6ff6849555879a11931b3bebe24e.setIcon(div_icon_d782e5a7a93111b34d4edfe3c6c40151);
+        
+    
+        var popup_ca16e58b00c9419f2f19b93ab2c18abd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8e142b430afc9d04f66c83e4b6a5e35f = $(`<div id="html_8e142b430afc9d04f66c83e4b6a5e35f" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>La Favola</b>: Italian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=La Favola Nice Nice France" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_ca16e58b00c9419f2f19b93ab2c18abd.setContent(html_8e142b430afc9d04f66c83e4b6a5e35f);
+            
+        
+
+        marker_809c6ff6849555879a11931b3bebe24e.bindPopup(popup_ca16e58b00c9419f2f19b93ab2c18abd)
+        ;
+
+        
+    
+    
+            marker_809c6ff6849555879a11931b3bebe24e.bindTooltip(
+                `<div>
+                     La Favola: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_becd67dad9a2f71e1d7d56d56d1f75b7 = L.marker(
+                [48.8799036, 2.3575559],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_ee06b4adbf5a082960fba68bfc15ef74 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_becd67dad9a2f71e1d7d56d56d1f75b7.setIcon(div_icon_ee06b4adbf5a082960fba68bfc15ef74);
+        
+    
+        var popup_578f4144284f6476c5a508d1c73785c5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_605c5278cac2657bc01e1973dd44b5db = $(`<div id="html_605c5278cac2657bc01e1973dd44b5db" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Sarvana Bhavan</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Sarvana Bhavan Paris Paris France" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_578f4144284f6476c5a508d1c73785c5.setContent(html_605c5278cac2657bc01e1973dd44b5db);
+            
+        
+
+        marker_becd67dad9a2f71e1d7d56d56d1f75b7.bindPopup(popup_578f4144284f6476c5a508d1c73785c5)
+        ;
+
+        
+    
+    
+            marker_becd67dad9a2f71e1d7d56d56d1f75b7.bindTooltip(
+                `<div>
+                     Sarvana Bhavan: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_418f9c9b9552c066630ffb3b3cd9c11b = L.marker(
+                [41.894256, 12.4742417],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_408b35ccb00cddd5e2d16acae6107d0a = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_418f9c9b9552c066630ffb3b3cd9c11b.setIcon(div_icon_408b35ccb00cddd5e2d16acae6107d0a);
+        
+    
+        var popup_95fdc067f0cef8391923c553da2209e4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_44c046363c9a4f066f7590e3f297b221 = $(`<div id="html_44c046363c9a4f066f7590e3f297b221" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Rosciolli Pizza</b>: Italian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Rosciolli Pizza Rome Italy Italy" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_95fdc067f0cef8391923c553da2209e4.setContent(html_44c046363c9a4f066f7590e3f297b221);
+            
+        
+
+        marker_418f9c9b9552c066630ffb3b3cd9c11b.bindPopup(popup_95fdc067f0cef8391923c553da2209e4)
+        ;
+
+        
+    
+    
+            marker_418f9c9b9552c066630ffb3b3cd9c11b.bindTooltip(
+                `<div>
+                     Rosciolli Pizza: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a7a7631f8fc8dde6962c9f338b013bf9 = L.marker(
+                [36.3931562, 25.4615092],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_2d554dac84018e13578bf473431e2ef7 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_a7a7631f8fc8dde6962c9f338b013bf9.setIcon(div_icon_2d554dac84018e13578bf473431e2ef7);
+        
+    
+        var popup_2604924fbc1e23e157a3a4f4aed30274 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e1cdfdffd8fa6b6d9c9d1d7d53945818 = $(`<div id="html_e1cdfdffd8fa6b6d9c9d1d7d53945818" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Jaipur Indian Restaurant</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Jaipur Indian Restaurant Santorini Santorini Greece" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_2604924fbc1e23e157a3a4f4aed30274.setContent(html_e1cdfdffd8fa6b6d9c9d1d7d53945818);
+            
+        
+
+        marker_a7a7631f8fc8dde6962c9f338b013bf9.bindPopup(popup_2604924fbc1e23e157a3a4f4aed30274)
+        ;
+
+        
+    
+    
+            marker_a7a7631f8fc8dde6962c9f338b013bf9.bindTooltip(
+                `<div>
+                     Jaipur Indian Restaurant: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c719ba5f0c23ba65eddf34d38b6f3f9a = L.marker(
+                [36.415902, 25.4329771],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_1e9b68bf1cc8277a77c974ab6c6140a1 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/mediterranean.jpeg\" alt=\"mediterranean\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_c719ba5f0c23ba65eddf34d38b6f3f9a.setIcon(div_icon_1e9b68bf1cc8277a77c974ab6c6140a1);
+        
+    
+        var popup_3522a2fd2fad1ff66c2aea1a61713fe0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_faf3808a75ea42950e6f6204de6ea12c = $(`<div id="html_faf3808a75ea42950e6f6204de6ea12c" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Veganissimo</b>: Mediterranean Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Veganissimo Santorini Santorini Greece" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_3522a2fd2fad1ff66c2aea1a61713fe0.setContent(html_faf3808a75ea42950e6f6204de6ea12c);
+            
+        
+
+        marker_c719ba5f0c23ba65eddf34d38b6f3f9a.bindPopup(popup_3522a2fd2fad1ff66c2aea1a61713fe0)
+        ;
+
+        
+    
+    
+            marker_c719ba5f0c23ba65eddf34d38b6f3f9a.bindTooltip(
+                `<div>
+                     Veganissimo: Mediterranean Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_52ec176cee5b57fcc79b5fc8c8b07424 = L.marker(
+                [37.444658, 25.3262531],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_d033551b45dd474f6056ed16bb7a263e = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/mediterranean.jpeg\" alt=\"mediterranean\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_52ec176cee5b57fcc79b5fc8c8b07424.setIcon(div_icon_d033551b45dd474f6056ed16bb7a263e);
+        
+    
+        var popup_fa369beaa49b11f16104e016d73bc96f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9d01e27611f29b00a92785f2821faf66 = $(`<div id="html_9d01e27611f29b00a92785f2821faf66" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Rhino Street Foods</b>: Mediterranean Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Rhino Street Foods Mykonos Mykonos Greece" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_fa369beaa49b11f16104e016d73bc96f.setContent(html_9d01e27611f29b00a92785f2821faf66);
+            
+        
+
+        marker_52ec176cee5b57fcc79b5fc8c8b07424.bindPopup(popup_fa369beaa49b11f16104e016d73bc96f)
+        ;
+
+        
+    
+    
+            marker_52ec176cee5b57fcc79b5fc8c8b07424.bindTooltip(
+                `<div>
+                     Rhino Street Foods: Mediterranean Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3f60f3ed0286c8ed82cf228e9978beba = L.marker(
+                [28.4611793, -81.4592334],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_0fb90f47da1b45a8cb83d26db61b4abe = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/indian.png\" alt=\"indian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_3f60f3ed0286c8ed82cf228e9978beba.setIcon(div_icon_0fb90f47da1b45a8cb83d26db61b4abe);
+        
+    
+        var popup_2cf33409e086ae1b67d91ab0836e16ac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b88c06044746d1f154afb4b3e7637550 = $(`<div id="html_b88c06044746d1f154afb4b3e7637550" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Aashirwad</b>: Indian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Aashirwad Orlando Florida USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_2cf33409e086ae1b67d91ab0836e16ac.setContent(html_b88c06044746d1f154afb4b3e7637550);
+            
+        
+
+        marker_3f60f3ed0286c8ed82cf228e9978beba.bindPopup(popup_2cf33409e086ae1b67d91ab0836e16ac)
+        ;
+
+        
+    
+    
+            marker_3f60f3ed0286c8ed82cf228e9978beba.bindTooltip(
+                `<div>
+                     Aashirwad: Indian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_27343f72b94b5ebc8d9b668a9214a556 = L.marker(
+                [42.3600825, -71.0588801],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_e9b5ff5900a856a15fe7bd2fbcee61c1 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to bottom, #A51931 20%, #F4F5F8 20%, #F4F5F8 40%, #2D2A4A 40%, #2D2A4A 60%, #F4F5F8 60%, #F4F5F8 80%, #A51931 80%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_27343f72b94b5ebc8d9b668a9214a556.setIcon(div_icon_e9b5ff5900a856a15fe7bd2fbcee61c1);
+        
+    
+        var popup_f3b497e61b0d3a7c51d716c9221b2f41 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cba5544c8688508816aae5d172b19706 = $(`<div id="html_cba5544c8688508816aae5d172b19706" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Live Alive Organic Cafe</b>: Thai Restaurant.<br>Pure Veg/Vegan: No<br>Notes and Entrees: multiple locations in Boston and Cambridge). Spicy peanut noodle is jain prep as-is on the menu. (Ask to remove Asian shredded veggies as it has scallion and carrot). Great vegan cafe<br><a href="https://www.google.com/search?q=Live Alive Organic Cafe Boston Massachusetts USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_f3b497e61b0d3a7c51d716c9221b2f41.setContent(html_cba5544c8688508816aae5d172b19706);
+            
+        
+
+        marker_27343f72b94b5ebc8d9b668a9214a556.bindPopup(popup_f3b497e61b0d3a7c51d716c9221b2f41)
+        ;
+
+        
+    
+    
+            marker_27343f72b94b5ebc8d9b668a9214a556.bindTooltip(
+                `<div>
+                     Live Alive Organic Cafe: Thai Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b2a1ffae09a04f559f9a7523feb72667 = L.marker(
+                [29.9399265, -95.46258689999999],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_314da166df42c6c5b522e49c7c2e7dd5 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to bottom, #A51931 20%, #F4F5F8 20%, #F4F5F8 40%, #2D2A4A 40%, #2D2A4A 60%, #F4F5F8 60%, #F4F5F8 80%, #A51931 80%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_b2a1ffae09a04f559f9a7523feb72667.setIcon(div_icon_314da166df42c6c5b522e49c7c2e7dd5);
+        
+    
+        var popup_f16dd8eec0bf67b80c9a95eb904bbeb1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7d295e817474f12f3f849280bd0f6830 = $(`<div id="html_7d295e817474f12f3f849280bd0f6830" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Thai Siam</b>: Thai Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Thai Siam Houston Texas USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_f16dd8eec0bf67b80c9a95eb904bbeb1.setContent(html_7d295e817474f12f3f849280bd0f6830);
+            
+        
+
+        marker_b2a1ffae09a04f559f9a7523feb72667.bindPopup(popup_f16dd8eec0bf67b80c9a95eb904bbeb1)
+        ;
+
+        
+    
+    
+            marker_b2a1ffae09a04f559f9a7523feb72667.bindTooltip(
+                `<div>
+                     Thai Siam: Thai Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_43518d9d87a6c2ccbff561b9b1622f22 = L.marker(
+                [29.6077026, -95.6570637],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_fc14c9c9fdd3dc08eee628a649a0824a = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_43518d9d87a6c2ccbff561b9b1622f22.setIcon(div_icon_fc14c9c9fdd3dc08eee628a649a0824a);
+        
+    
+        var popup_a8339f1c5f16760e108e2df069c33598 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_13388d6fa850178198a2b0d1c6e89398 = $(`<div id="html_13388d6fa850178198a2b0d1c6e89398" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Aling'S Hakka</b>: Asian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Aling's Hakka Huoston Texas USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_a8339f1c5f16760e108e2df069c33598.setContent(html_13388d6fa850178198a2b0d1c6e89398);
+            
+        
+
+        marker_43518d9d87a6c2ccbff561b9b1622f22.bindPopup(popup_a8339f1c5f16760e108e2df069c33598)
+        ;
+
+        
+    
+    
+            marker_43518d9d87a6c2ccbff561b9b1622f22.bindTooltip(
+                `<div>
+                     Aling'S Hakka: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fbd6cd1a7ea7b05cc1b44f532dbec58a = L.marker(
+                [29.7600771, -95.37011079999999],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_67e8825530f49abed0ce17507b794f96 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/dessert.jpeg\" alt=\"dessert\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_fbd6cd1a7ea7b05cc1b44f532dbec58a.setIcon(div_icon_67e8825530f49abed0ce17507b794f96);
+        
+    
+        var popup_cf332ca0364ef9c293b58ca928d317c4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_777b367fe49b2a548c9aa96f8cf9a4de = $(`<div id="html_777b367fe49b2a548c9aa96f8cf9a4de" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Sweet Paris</b>: Dessert Place.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Sweet Paris Huoston Texas USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_cf332ca0364ef9c293b58ca928d317c4.setContent(html_777b367fe49b2a548c9aa96f8cf9a4de);
+            
+        
+
+        marker_fbd6cd1a7ea7b05cc1b44f532dbec58a.bindPopup(popup_cf332ca0364ef9c293b58ca928d317c4)
+        ;
+
+        
+    
+    
+            marker_fbd6cd1a7ea7b05cc1b44f532dbec58a.bindTooltip(
+                `<div>
+                     Sweet Paris: Dessert Place
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6a39ef3c0685b4bcbffbe895548bb649 = L.marker(
+                [37.2871618, -121.9432474],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_7f267039bcb317f49809928498848189 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_6a39ef3c0685b4bcbffbe895548bb649.setIcon(div_icon_7f267039bcb317f49809928498848189);
+        
+    
+        var popup_c4fd17278643b6309ca6d4451b3785b8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a35627c9447dae1d758c1ab704b0e8ce = $(`<div id="html_a35627c9447dae1d758c1ab704b0e8ce" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>La Pizzeria Italian Pizza And Bar</b>: Italian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=La Pizzeria Italian Pizza and Bar Bay Area California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_c4fd17278643b6309ca6d4451b3785b8.setContent(html_a35627c9447dae1d758c1ab704b0e8ce);
+            
+        
+
+        marker_6a39ef3c0685b4bcbffbe895548bb649.bindPopup(popup_c4fd17278643b6309ca6d4451b3785b8)
+        ;
+
+        
+    
+    
+            marker_6a39ef3c0685b4bcbffbe895548bb649.bindTooltip(
+                `<div>
+                     La Pizzeria Italian Pizza And Bar: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7b870dbcf978192837c3d259b1fe3cd0 = L.marker(
+                [37.891562, -122.123274],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_79fe558380f0bac415205f6f9ab2c63d = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%); border: 2px solid black; border-radius: 50%;\"\u003e\u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_7b870dbcf978192837c3d259b1fe3cd0.setIcon(div_icon_79fe558380f0bac415205f6f9ab2c63d);
+        
+    
+        var popup_83204cf12a485a636fc7cfbbb4b8f615 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f10d46e041093c8f547ab8ce1376a826 = $(`<div id="html_f10d46e041093c8f547ab8ce1376a826" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Pizza Antica</b>: Italian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Pizza antica Bay Area California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_83204cf12a485a636fc7cfbbb4b8f615.setContent(html_f10d46e041093c8f547ab8ce1376a826);
+            
+        
+
+        marker_7b870dbcf978192837c3d259b1fe3cd0.bindPopup(popup_83204cf12a485a636fc7cfbbb4b8f615)
+        ;
+
+        
+    
+    
+            marker_7b870dbcf978192837c3d259b1fe3cd0.bindTooltip(
+                `<div>
+                     Pizza Antica: Italian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_36dbbc8d03814e14393fadb39ee1b248 = L.marker(
+                [37.4025732, -121.9403097],
+                {}
+            ).addTo(map_74f175265ee32e941c8767cf02d0f9d1);
+        
+    
+            var div_icon_36afc7ea70c6e1f167cc47c758886e75 = L.divIcon({"className": "empty", "html": "\n    \u003cdiv style=\"position: relative; width: 18.75px; height: 30.75px; text-align: center;\"\u003e\n        \u003cdiv style=\"position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background-color: #fff; border: 2px solid black; border-radius: 50%;\"\u003e\n            \u003cimg src=\"static/asian.jpeg\" alt=\"asian\" style=\"width: 100%; height: 100%; border-radius: 50%;\" /\u003e\n        \u003c/div\u003e\n        \u003cdiv style=\"position: absolute; top: 32px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 6.75px solid transparent; border-right: 6.75px solid transparent; border-top: 12.75px solid black;\"\u003e\u003c/div\u003e\n    \u003c/div\u003e\n    ", "iconAnchor": [15, 42.75], "iconSize": [30, 42.75]});
+            marker_36dbbc8d03814e14393fadb39ee1b248.setIcon(div_icon_36afc7ea70c6e1f167cc47c758886e75);
+        
+    
+        var popup_8d056ba3644871992c76bd8448ac15a9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_726afe44008bde1399a178b140d5f12a = $(`<div id="html_726afe44008bde1399a178b140d5f12a" style="width: 100.0%; height: 100.0%;"><div style="width: 175px;"><b>Inchins Bamboo Garden</b>: Asian Restaurant.<br>Pure Veg/Vegan: No<br><a href="https://www.google.com/search?q=Inchins Bamboo Garden San Jose California USA" target="_blank">More Information and Directions</a></div></div>`)[0];
+                popup_8d056ba3644871992c76bd8448ac15a9.setContent(html_726afe44008bde1399a178b140d5f12a);
+            
+        
+
+        marker_36dbbc8d03814e14393fadb39ee1b248.bindPopup(popup_8d056ba3644871992c76bd8448ac15a9)
+        ;
+
+        
+    
+    
+            marker_36dbbc8d03814e14393fadb39ee1b248.bindTooltip(
+                `<div>
+                     Inchins Bamboo Garden: Asian Restaurant
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

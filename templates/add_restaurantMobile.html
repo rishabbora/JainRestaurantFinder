@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Add a Restaurant - Jain Food Finder</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showSuccessMessage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('success')) {
+                const successMessage = document.getElementById('success-message');
+                if (urlParams.get('success') === 'True') {
+                    successMessage.style.display = 'block';
+                } else if (urlParams.get('success') === 'duplicate') {
+                    successMessage.style.display = 'block';
+                    successMessage.textContent = "Restaurant Already on Map";
+                    successMessage.style.backgroundColor = 'orange';
+                } else {
+                    successMessage.style.display = 'block';
+                    successMessage.textContent = "Restaurant Not Found";
+                    successMessage.style.backgroundColor = 'red';
+                }
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 4000);
+            }
+        }
+
+        function generateCaptcha() {
+            const captcha = Math.random().toString(36).substring(2, 7);
+            document.getElementById('generated-captcha').textContent = captcha;
+            document.getElementById('captcha-input').value = '';
+        }
+
+        function validateCaptcha(event) {
+            const userCaptcha = document.getElementById('captcha-input').value;
+            const generatedCaptcha = document.getElementById('generated-captcha').textContent;
+            if (userCaptcha !== generatedCaptcha) {
+                event.preventDefault();
+                alert('Captcha does not match. Please try again.');
+                generateCaptcha();
+            }
+        }
+
+        function showSpinner() {
+            const spinner = document.getElementById('spinner');
+            spinner.style.display = 'block';
+            spinner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        window.addEventListener('load', function() {
+            document.body.classList.remove('hidden');
+            generateCaptcha();
+        });
+    </script>
+</head>
+<body class="hidden" onload="showSuccessMessage();">
+    {% include 'navbarMobile.html' %}
+    <div id="content">
+        <div id="success-message" class="success-message">Restaurant Added</div>
+        <h1>Add a Restaurant</h1>
+        
+        <form name="restaurant-form" action="/submit_restaurant" method="POST" onsubmit="validateCaptcha(event); showSpinner();">
+            <label for="name">Restaurant Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="pure" name="pure">
+                <label for="pure">Pure Veg/Vegan</label>
+            </div>
+
+            <div>
+                <label>Cuisines:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="indian" name="cuisine" value="indian">
+                        <label for="indian">Indian</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="italian" name="cuisine" value="italian">
+                        <label for="italian">Italian</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="mexican" name="cuisine" value="mexican">
+                        <label for="mexican">Mexican</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="mediterranean" name="cuisine" value="mediterranean">
+                        <label for="mediterranean">Mediterranean</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="thai" name="cuisine" value="thai">
+                        <label for="thai">Thai</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="sushi" name="cuisine" value="sushi">
+                        <label for="sushi">Sushi</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="asian" name="cuisine" value="asian">
+                        <label for="asian">Asian</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="american" name="cuisine" value="american">
+                        <label for="american">American</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="dessert" name="cuisine" value="dessert">
+                        <label for="dessert">Dessert</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="beverages" name="cuisine" value="beverages">
+                        <label for="beverages">Beverages</label>
+                    </div>
+                    <div class="other-container">
+                        <label for="other_cuisine">Other:</label>
+                        <input type="text" id="other_cuisine" name="other_cuisine">
+                    </div>
+                </div>
+            </div>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" class="optional-input" placeholder="Include Jain dishes you have had and any other relevant information. Please be as specific as possible!"></textarea>
+            
+            <div class="captcha-container">
+                <span id="generated-captcha" class="captcha-text"></span>
+                <input type="text" id="captcha-input" name="captcha" placeholder="Enter CAPTCHA" required>
+                <button type="button" onclick="generateCaptcha()">Generate New Captcha</button>
+            </div>
+
+            <input type="submit" value="Submit">
+            <div id="spinner" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        </form>
+    </div>
+</body>
+</html>

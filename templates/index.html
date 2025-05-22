@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jain Restaurant Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <style>
+        /* Ensure the content is hidden initially */
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        let userLat, userLng, currentZoom = 12;
+
+        function initMap() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        userLat = position.coords.latitude;
+                        userLng = position.coords.longitude;
+                        loadMap(userLat, userLng, currentZoom);
+                    },
+                    function(error) {
+                        console.warn(`ERROR(${error.code}): ${error.message}`);
+                        loadDefaultMap();
+                    }
+                );
+            } else {
+                alert("Geolocation is not supported by this browser.");
+                loadDefaultMap();
+            }
+        }
+
+        function loadMap(lat, lng, zoom) {
+            fetch(`/update_map?lat=${lat}&lng=${lng}&zoom=${zoom}`)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('foliumMap').innerHTML = data;
+                    map = L.map('map').setView([lat, lng], zoom);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19
+                    }).addTo(map);
+                });
+        }
+
+        function loadDefaultMap() {
+            fetch('/update_map')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('foliumMap').innerHTML = data;
+                    map = L.map('map').setView([37.0902, -95.7129], 4.5);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19
+                    }).addTo(map);
+                });
+        }
+
+        function showSuccessMessage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('success')) {
+                const successMessage = document.getElementById('success-message');
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 3000);
+            }
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const userInput = document.querySelector('input[name="userInput"]').value;
+
+            fetch('/your_form_endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ userInput: userInput })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        userLat = data.lat;
+                        userLng = data.lng;
+                        loadMap(userLat, userLng, currentZoom);
+                        showSuccessMessage();
+                    } else {
+                        console.error('Form submission failed');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function handleCheckboxChange() {
+            const checkboxes = document.querySelectorAll('input[name="cuisine"]:checked');
+            const selectedCuisines = Array.from(checkboxes).map(checkbox => checkbox.value);
+            updateMapMarkers(selectedCuisines);
+        }
+
+        function updateMapMarkers(selectedCuisines) {
+            const params = new URLSearchParams();
+            params.append('cuisines', selectedCuisines.join(','));
+            params.append('lat', userLat);
+            params.append('lng', userLng);
+            params.append('zoom', currentZoom);
+            const url = `/update_map?${params.toString()}`;
+            
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('foliumMap').innerHTML = data;
+                    map = L.map('map').setView([userLat, userLng], currentZoom);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19
+                    }).addTo(map);
+                })
+                .catch(error => console.error('Error updating markers:', error));
+        }
+
+        window.addEventListener('load', function() {
+            document.body.classList.remove('hidden');
+        });
+    </script>
+</head> 
+<body class="homepage hidden" onload="initMap(); showSuccessMessage();">
+    {% include 'navbar.html' %}
+    <p>Jain Restaurant Finder Laptop</p>
+    <br>
+    <h1>
+        <h1>Jain Restaurant Finder</h1>
+        <div class="pcontainer">
+            <p class="typing">Welcome to Jain Restaurant Finder! This website allows Jains worldwide to share and discover restaurants that serve Jain dishes.     hey</p>
+        </div>
+        <form class="search-form unique-search-form" onsubmit="handleSubmit(event);">
+            <div class="your-class">
+                <input type="text" name="userInput" placeholder="Enter City/State to View">
+                <input type="submit" value="Submit" class="unique-submit-button">
+            </div> 
+        </form>
+    </h1>
+    <br>
+    <div style="display: flex; justify-content: center; align-items: flex-start;">
+        <div id="foliumMap">
+            {% include 'map.html' %}
+        </div>
+        <div class="filter-container">
+            <div class="vertical-menu">
+                <label>Filter By Cuisine</label>
+                <br>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="indian" name="cuisine" value="indian" onchange="handleCheckboxChange()">
+                    <label for="indian">Indian</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="italian" name="cuisine" value="italian" onchange="handleCheckboxChange()">
+                    <label for="italian">Italian</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="mexican" name="cuisine" value="mexican" onchange="handleCheckboxChange()">
+                    <label for="mexican">Mexican</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="mediterranean" name="cuisine" value="mediterranean" onchange="handleCheckboxChange()">
+                    <label for="mediterranean">Mediterranean</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="thai" name="cuisine" value="thai" onchange="handleCheckboxChange()">
+                    <label for="thai">Thai</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="sushi" name="cuisine" value="sushi" onchange="handleCheckboxChange()">
+                    <label for="sushi">Sushi</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="asian" name="cuisine" value="asian" onchange="handleCheckboxChange()">
+                    <label for="asian">Asian</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="american" name="cuisine" value="american" onchange="handleCheckboxChange()">
+                    <label for="american">American</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="dessert" name="cuisine" value="dessert" onchange="handleCheckboxChange()">
+                    <label for="dessert">Dessert</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="beverages" name="cuisine" value="beverages" onchange="handleCheckboxChange()">
+                    <label for="beverages">Beverages</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="pure" name="cuisine" value="pure" onchange="handleCheckboxChange()">
+                    <label for="pure">Pure Veg/Vegan</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br> <br>
+    <div id="success-message" class="success-message">Form submitted successfully</div>
+</body>
+</html>
